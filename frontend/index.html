@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Janković Portfolio | Full Stack Developer</title>
+    <meta name="description" content="Portfolio Aleksandra Jankovića - Level 1 Support Point of Sale engineer sa znanjem Java, Spring Boot, Docker, MySQL. Student završne godine računarske tehnike.">
+    <meta name="keywords" content="Aleksandar Janković, portfolio, Java developer, Spring Boot, MySQL, Docker, POS support, računarska tehnika">
+    <meta name="author" content="Aleksandar Janković">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aleksandar Janković Portfolio">
+    <meta property="og:description" content="Portfolio Aleksandra Jankovića - Full Stack Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aleksandar-jankovic.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Aleksandar Janković</h3>
+            <p>Učitavanje portfolija...</p>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Aleksandar</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Početna</a></li>
+                <li><a href="#about" class="nav-link">O meni</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Promeni temu">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Zdravo, ja sam <span class="highlight">Aleksandar Janković</span></h1>
+            <p class="hero-subtitle">Level 1 Support Point of Sale - Sainsbury's</p>
+            <div class="hero-intro-text">
+                <p>Student sam završne godine Visoke škole elektrotehnike i računarstva, u završnoj fazi studija (preostala odbrana diplomskog rada). Trenutno sam zaposlen u kompaniji NCR Voyix na poziciji Level 1 Support – Point of Sale za Sainsbury's prodavnice, gde stičem praktično iskustvo u radu sa POS sistemima i tehničkom podrškom.</p>
+                <p>Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Vidi moj rad</a>
+                <a href="#contact" class="btn btn-secondary">Kontaktiraj me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-image">
+                <img src="assets/images/profile.png" alt="Aleksandar Janković" id="profileImg">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">O meni</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Rođen sam i odrastao u Užicu, gde sam tokom srednje škole kroz različite poslove i stručnu praksu stekao svoja prva iskustva. Praksa je bila usmerena na rad sa programima vezanim za ekonomiju, koji su se u velikoj meri oslanjali na skladištenje podataka, evidenciju i njihovu funkcionalnu primenu. Upravo tu sam se prvi put susreo sa logikom baza i procesima obrade informacija, što je probudilo moje interesovanje i postavilo temelje za dalji razvoj u oblasti programiranja.</p>
+                    <p>Nakon završetka srednje škole preselio sam se u Beograd, gde sam započeo studije elektrotehnike i računarstva i dodatno usmerio svoj put ka IT-u. Tokom studija istraživao sam različite metode programiranja, ali sam se uvek najviše zadržavao na logici kreiranja i funkcionalnosti programa. Moja pitanja su bila „Zašto?" i „Kako?" – zašto sistem funkcioniše baš tako i kako zapravo prenosi „poruku" kroz svoj tok podataka.</p>
+                    <p>Ovakav način razmišljanja prirodno me je usmerio ka backend razvoju, a prvenstveno ka učenju Spring Boot-a. Backend mi omogućava da se bavim onim što me najviše inspiriše – razumevanjem logike podataka, povezivanjem procesa i izgradnjom stabilne osnove na kojoj se oslanja svaki funkcionalan softver.</p>
+                    <div class="skills">
+                        <h3>Glavne veštine:</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">XAMPP</span>
+                            <span class="skill-tag">DBeaver</span>
+                            <span class="skill-tag">MS Office</span>
+                            <span class="skill-tag">Adobe Premiere Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio projekti</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Teamble - Project Manager Aplikacija</h3>
+                        <p>Aplikacija dizajnirana za efikasnu organizaciju i praćenje projekata, zadataka i timske saradnje</p>
+                        <div class="portfolio-tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Git</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/cikirose/projectmanagerapp.git" class="portfolio-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>TeamBuildStay - Rezervacije kuća</h3>
+                        <p>Aplikacija koja omogućava jednostavno pretraživanje i rezervaciju privatnih kuća, posebno namenjenih za organizaciju team building događaja</p>
+                        <div class="portfolio-tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>XAMPP</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/cikirose/diplomski.git" class="portfolio-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Video Montaža Projekti</h3>
+                        <p>Profesionalni video montaža projekti koristeći Adobe Premiere Pro i CapCut</p>
+                        <div class="portfolio-tags">
+                            <span>Adobe Premiere Pro</span>
+                            <span>CapCut</span>
+                            <span>Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv">
+        <div class="container">
+            <h2 class="section-title">CV & Obrazovanje</h2>
+            <div class="cv-content">
+                <div class="cv-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Obrazovanje</h3>
+                    <div class="cv-item">
+                        <div class="cv-date">2020 - Trenutno</div>
+                        <div class="cv-details">
+                            <h4>Visoka škola elektrotehnike i računarstva</h4>
+                            <p>Smer: Računarska tehnika</p>
+                            <p>Mesto: Beograd</p>
+                            <p>Status: Završna godina (preostala odbrana diplomskog rada)</p>
+                        </div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date">2016 - 2020</div>
+                        <div class="cv-details">
+                            <h4>Ekonomska škola Užice</h4>
+                            <p>Smer: Finansijski administrator</p>
+                            <p>Mesto: Užice</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3><i class="fas fa-briefcase"></i> Radno iskustvo</h3>
+                    <div class="cv-item">
+                        <div class="cv-date">April 2025 - Trenutno</div>
+                        <div class="cv-details">
+                            <h4>Level 1 Support Point of Sale - Sainsbury's</h4>
+                            <p>NCR Voyix - Beograd</p>
+                            <ul>
+                                <li>Snažna tehnička osnova: Veštine u dijagnostici, održavanju i optimizaciji POS i samouslužnih kasa</li>
+                                <li>Analitičko razmišljanje i rešavanje problema pod pritiskom vremena</li>
+                                <li>Rad sa IT infrastrukturom i korporativnim softverskim alatima</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date">Januar 2024 - April 2025</div>
+                        <div class="cv-details">
+                            <h4>Fleet Maintenance Support</h4>
+                            <p>SMJ-Freight - Remote</p>
+                            <ul>
+                                <li>Održavanje i kontrola redovnih inspekcija i popravki vozila</li>
+                                <li>Efikasna komunikacija sa vozačima, mehaničarima i menadžerima</li>
+                                <li>Profesionalna komunikacija sa servisima širom SAD-a</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-certificate"></i> Dodatne veštine</h3>
+                    <div class="cv-item">
+                        <div class="cv-date">-</div>
+                        <div class="cv-details">
+                            <h4>Jezici i softver</h4>
+                            <ul>
+                                <li><strong>Engleski:</strong> Napredni nivo</li>
+                                <li><strong>MS Office:</strong> Word, Excel, PowerPoint</li>
+                                <li><strong>Video montaža:</strong> Adobe Premiere Pro, CapCut</li>
+                                <li><strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, XAMPP, DBeaver</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontaktiraj me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informacije</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>aleksandarjankovic159@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+381603118999</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Belgrade</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/aleksandar-jankovic-469829352/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/cikirose" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Vaše ime" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Vaš email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Naslov" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Vaša poruka" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Aleksandar Janković Portfolio. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
