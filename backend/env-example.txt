@@ -1,0 +1,13 @@
+# Primer Email Konfiguracije
+# Kopiraj ovaj fajl i kreiraj .env fajl sa sledećim sadržajem:
+
+EMAIL_USERNAME=tvoj-email@gmail.com
+EMAIL_PASSWORD=tvoja-16-karakter-app-password
+ADMIN_EMAIL=tvoj-email@gmail.com
+ADMIN_NAME=Tvoje Ime Prezime
+
+# Instrukcije:
+# 1. Kreiraj App Password u Gmail Security settings
+# 2. Popuni gore navedene vrednosti  
+# 3. Spremi kao .env u backend/ direktorijumu
+# 4. NIKAD ne komituj .env fajl u git!

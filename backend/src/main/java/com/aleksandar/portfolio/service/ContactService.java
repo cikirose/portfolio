@@ -18,17 +18,36 @@ import java.util.Optional;
 public class ContactService {
 
     private final ContactRepository contactRepository;
+    private final EmailService emailService;
 
     @Autowired
-    public ContactService(ContactRepository contactRepository) {
+    public ContactService(ContactRepository contactRepository, EmailService emailService) {
         this.contactRepository = contactRepository;
+        this.emailService = emailService;
     }
 
     /**
-     * Čuva novu kontakt poruku
+     * Čuva novu kontakt poruku i šalje email notifikacije
      */
     public Contact saveContact(Contact contact) {
-        return contactRepository.save(contact);
+        // Čuvamo kontakt u bazi podataka
+        Contact savedContact = contactRepository.save(contact);
+        
+        // Šaljemo email notifikacije asinhrono (u background-u)
+        try {
+            // Email notifikacija administratoru
+            emailService.sendNewContactNotification(savedContact);
+            
+            // Auto-reply email pošaljiocu
+            emailService.sendAutoReplyEmail(savedContact);
+            
+            System.out.println("✅ Email notifikacije su pokrenute za kontakt ID: " + savedContact.getId());
+        } catch (Exception e) {
+            System.err.println("❌ Greška pri slanju email notifikacija: " + e.getMessage());
+            // Ne prekidamo proces jer je kontakt već sačuvan
+        }
+        
+        return savedContact;
     }
 
     /**
