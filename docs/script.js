@@ -413,33 +413,66 @@ function initContactForm() {
                 message: message
             };
             
-            // Send POST request to backend
-            fetch('http://localhost:8080/contacts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(contactData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
-                if (data.success) {
+            // Send email using EmailJS (GitHub Pages compatible!)
+            console.log('🚀 Koristim EmailJS za slanje email-a...');
+            
+            // Check if EmailJS is loaded
+            if (typeof emailjs === 'undefined') {
+                console.log('📦 Učitavam EmailJS biblioteku...');
+                
+                // Load EmailJS dynamically
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+                script.onload = () => {
+                    console.log('✅ EmailJS biblioteka učitana!');
+                    emailjs.init('eZ1ToHn60D72IrUw-'); // Public Key
+                    sendEmailViaEmailJS();
+                };
+                script.onerror = () => {
+                    console.error('❌ Greška pri učitavanju EmailJS biblioteke!');
+                    const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
+                    const errorMessage = translations[currentLanguage]['form.error'];
+                    showNotification(errorMessage, 'error');
+                };
+                document.head.appendChild(script);
+            } else {
+                console.log('✅ EmailJS već je učitan!');
+                sendEmailViaEmailJS();
+            }
+            
+            function sendEmailViaEmailJS() {
+                // EmailJS template parametri
+                const templateParams = {
+                    from_name: name,
+                    from_email: email,
+                    subject: subject,
+                    message: message,
+                    to_email: 'aleksandarjankovic159@gmail.com' // Tvoj email
+                };
+                
+                console.log('📧 Šaljem email sa parametrima:', templateParams);
+                
+                // Pošalji email preko EmailJS
+                emailjs.send(
+                    'service_7eklp8j',    // Gmail service ID
+                    'template_6q8y275',   // Email template ID
+                    templateParams
+                )
+                .then(function(response) {
+                    console.log('✅ Email poslat uspešno!', response.status, response.text);
+                    console.log('📊 Response details:', response);
+                    const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
                     const successMessage = translations[currentLanguage]['form.success'];
                     showNotification(successMessage, 'success');
                     contactForm.reset();
-                    console.log('Contact saved:', data.contact);
-                } else {
+                }, function(error) {
+                    console.error('❌ GREŠKA pri slanju email-a:', error);
+                    console.error('📋 Error details:', error.text || error.message || error);
+                    const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
                     const errorMessage = translations[currentLanguage]['form.error'];
                     showNotification(errorMessage, 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
-                const errorMessage = translations[currentLanguage]['form.error'];
-                showNotification(errorMessage, 'error');
-            });
+                });
+            }
         });
     }
 }

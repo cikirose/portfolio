@@ -400,18 +400,10 @@ function initContactForm() {
                 return;
             }
             
-            // Send data to Spring Boot backend
+            // Send email using EmailJS - No backend needed!
             const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
             const sendingMessage = translations[currentLanguage]['form.sending'];
             showNotification(sendingMessage, 'info');
-            
-            // Prepare data for backend
-            const contactData = {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            };
             
             // Send email using EmailJS (GitHub Pages compatible!)
             console.log('🚀 Koristim EmailJS za slanje email-a...');
