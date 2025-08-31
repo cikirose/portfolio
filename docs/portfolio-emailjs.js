@@ -12,8 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize basic features (simplified)
     console.log('🎯 Initializing basic portfolio features...');
-    initLanguageToggle();
-    initThemeToggle();
+    
+    // Wait a bit for DOM to be fully ready
+    setTimeout(() => {
+        console.log('⏰ DOM should be ready now, initializing toggles...');
+        
+        // Manual check for elements
+        console.log('🔍 Manual element check:');
+        console.log('- languageToggle:', document.getElementById('languageToggle'));
+        console.log('- languageText:', document.getElementById('languageText'));
+        console.log('- themeToggle:', document.getElementById('themeToggle'));
+        console.log('- themeIcon:', document.getElementById('themeIcon'));
+        
+        initLanguageToggle();
+        initThemeToggle();
+    }, 100);
 });
 
 // Remove loading screen
@@ -188,22 +201,48 @@ function initLanguageToggle() {
     const languageToggle = document.getElementById('languageToggle');
     const languageText = document.getElementById('languageText');
     
+    console.log('🔍 Debug - languageToggle element:', languageToggle);
+    console.log('🔍 Debug - languageText element:', languageText);
+    
     if (languageToggle && languageText) {
-        languageToggle.addEventListener('click', function() {
-            const currentText = languageText.textContent;
+        console.log('✅ Both elements found, adding event listener...');
+        
+        // Set initial language
+        const savedLanguage = localStorage.getItem('language') || 'sr';
+        console.log('📋 Initial language:', savedLanguage);
+        if (savedLanguage === 'en') {
+            languageText.textContent = 'SRB';
+            document.documentElement.setAttribute('lang', 'en');
+        } else {
+            languageText.textContent = 'ENG';
+            document.documentElement.setAttribute('lang', 'sr');
+        }
+        applyBasicTranslations(savedLanguage);
+        languageToggle.addEventListener('click', function(e) {
+            console.log('🔥 Language button clicked!');
+            e.preventDefault();
+            const currentText = languageText.textContent.trim();
+            console.log('📋 Current text:', currentText);
+            
             if (currentText === 'ENG') {
                 languageText.textContent = 'SRB';
                 document.documentElement.setAttribute('lang', 'en');
+                localStorage.setItem('language', 'en');
+                applyBasicTranslations('en');
                 console.log('🌐 Language switched to English');
             } else {
                 languageText.textContent = 'ENG';
                 document.documentElement.setAttribute('lang', 'sr');
+                localStorage.setItem('language', 'sr');
+                applyBasicTranslations('sr');
                 console.log('🌐 Language switched to Serbian');
             }
         });
         console.log('✅ Language toggle initialized');
     } else {
-        console.warn('⚠️ Language toggle elements not found');
+        console.error('❌ Language toggle elements not found!');
+        console.log('languageToggle:', languageToggle);
+        console.log('languageText:', languageText);
     }
 }
 
@@ -214,18 +253,27 @@ function initThemeToggle() {
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
     
+    console.log('🔍 Debug - themeToggle element:', themeToggle);
+    console.log('🔍 Debug - themeIcon element:', themeIcon);
+    
     if (themeToggle && themeIcon) {
+        console.log('✅ Both theme elements found, setting up...');
+        
         // Set default theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme);
         
-        themeToggle.addEventListener('click', function() {
+        themeToggle.addEventListener('click', function(e) {
+            console.log('🔥 Theme button clicked!');
+            e.preventDefault();
             const currentTheme = body.getAttribute('data-theme');
+            console.log('📋 Current theme:', currentTheme);
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             setTheme(newTheme);
         });
         
         function setTheme(theme) {
+            console.log('🎨 Setting theme to:', theme);
             body.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             
@@ -240,6 +288,69 @@ function initThemeToggle() {
         
         console.log('✅ Theme toggle initialized');
     } else {
-        console.warn('⚠️ Theme toggle elements not found');
+        console.error('❌ Theme toggle elements not found!');
+        console.log('themeToggle:', themeToggle);
+        console.log('themeIcon:', themeIcon);
     }
+}
+
+// Basic translations - simplified version
+function applyBasicTranslations(language) {
+    console.log('🔄 Applying basic translations for:', language);
+    
+    // Basic translations object
+    const translations = {
+        en: {
+            'nav.home': 'Home',
+            'nav.about': 'About',
+            'nav.portfolio': 'Portfolio', 
+            'nav.cv': 'CV',
+            'nav.contact': 'Contact',
+            'contact.title': 'Contact me',
+            'contact.form.name': 'Your name',
+            'contact.form.email': 'Your email',
+            'contact.form.subject': 'Subject',
+            'contact.form.message': 'Your message',
+            'contact.form.submit': 'Send message'
+        },
+        sr: {
+            'nav.home': 'Početna',
+            'nav.about': 'O meni', 
+            'nav.portfolio': 'Portfolio',
+            'nav.cv': 'CV',
+            'nav.contact': 'Kontakt',
+            'contact.title': 'Kontaktiraj me',
+            'contact.form.name': 'Vaše ime',
+            'contact.form.email': 'Vaš email',
+            'contact.form.subject': 'Naslov',
+            'contact.form.message': 'Vaša poruka',
+            'contact.form.submit': 'Pošalji poruku'
+        }
+    };
+    
+    const currentTranslations = translations[language];
+    if (!currentTranslations) {
+        console.warn('⚠️ No translations found for language:', language);
+        return;
+    }
+    
+    // Apply translations to elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (currentTranslations[key]) {
+            element.innerHTML = currentTranslations[key];
+            console.log('✅ Translated:', key, '→', currentTranslations[key]);
+        }
+    });
+    
+    // Apply translations to placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (currentTranslations[key]) {
+            element.placeholder = currentTranslations[key];
+            console.log('✅ Translated placeholder:', key, '→', currentTranslations[key]);
+        }
+    });
+    
+    console.log('🎯 Basic translations applied for', language);
 }
