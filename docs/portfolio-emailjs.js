@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize basic features (simplified)
     console.log('🎯 Initializing basic portfolio features...');
+    initLanguageToggle();
+    initThemeToggle();
 });
 
 // Remove loading screen
@@ -178,4 +180,66 @@ function showNotification(message, type = 'info') {
             notification.remove();
         }
     }, 5000);
+}
+
+// Language Toggle functionality
+function initLanguageToggle() {
+    console.log('🌐 Initializing language toggle...');
+    const languageToggle = document.getElementById('languageToggle');
+    const languageText = document.getElementById('languageText');
+    
+    if (languageToggle && languageText) {
+        languageToggle.addEventListener('click', function() {
+            const currentText = languageText.textContent;
+            if (currentText === 'ENG') {
+                languageText.textContent = 'SRB';
+                document.documentElement.setAttribute('lang', 'en');
+                console.log('🌐 Language switched to English');
+            } else {
+                languageText.textContent = 'ENG';
+                document.documentElement.setAttribute('lang', 'sr');
+                console.log('🌐 Language switched to Serbian');
+            }
+        });
+        console.log('✅ Language toggle initialized');
+    } else {
+        console.warn('⚠️ Language toggle elements not found');
+    }
+}
+
+// Theme Toggle functionality
+function initThemeToggle() {
+    console.log('🌙 Initializing theme toggle...');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    
+    if (themeToggle && themeIcon) {
+        // Set default theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+        
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+        
+        function setTheme(theme) {
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                console.log('🌙 Theme switched to dark mode');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                console.log('☀️ Theme switched to light mode');
+            }
+        }
+        
+        console.log('✅ Theme toggle initialized');
+    } else {
+        console.warn('⚠️ Theme toggle elements not found');
+    }
 }
