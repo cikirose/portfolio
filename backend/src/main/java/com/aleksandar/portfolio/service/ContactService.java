@@ -34,16 +34,29 @@ public class ContactService {
         Contact savedContact = contactRepository.save(contact);
         
         // Šaljemo email notifikacije asinhrono (u background-u)
+        // PRIVREMENO ISKLJUČENO - može se uključiti kada se podesi email
         try {
-            // Email notifikacija administratoru
-            emailService.sendNewContactNotification(savedContact);
+            // Proveri da li je email konfiguracija podešena
+            String emailUsername = System.getenv("EMAIL_USERNAME");
+            String adminEmail = System.getenv("ADMIN_EMAIL");
             
-            // Auto-reply email pošaljiocu
-            emailService.sendAutoReplyEmail(savedContact);
+            if (emailUsername != null && !emailUsername.isEmpty() && 
+                adminEmail != null && !adminEmail.isEmpty() && !adminEmail.contains("example.com")) {
+                
+                // Email konfiguracija je OK, šaljemo email-ove
+                emailService.sendNewContactNotification(savedContact);
+                emailService.sendAutoReplyEmail(savedContact);
+                System.out.println("✅ Email notifikacije su pokrenute za kontakt ID: " + savedContact.getId());
+                
+            } else {
+                // Email nije konfigurisan, samo logujemo
+                System.out.println("ℹ️ Email konfiguracija nije podešena. Kontakt je sačuvan bez slanja email-a.");
+                System.out.println("ℹ️ Za uključivanje email funkcionalnosti, podesi EMAIL_USERNAME i ADMIN_EMAIL environment varijable.");
+            }
             
-            System.out.println("✅ Email notifikacije su pokrenute za kontakt ID: " + savedContact.getId());
         } catch (Exception e) {
             System.err.println("❌ Greška pri slanju email notifikacija: " + e.getMessage());
+            System.out.println("ℹ️ Kontakt je ipak uspešno sačuvan u bazi podataka.");
             // Ne prekidamo proces jer je kontakt već sačuvan
         }
         

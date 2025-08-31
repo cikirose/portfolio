@@ -38,6 +38,16 @@ public class EmailService {
      */
     public void sendNewContactNotification(Contact contact) {
         try {
+            System.out.println("🔄 Pokušavam slanje email notifikacije...");
+            System.out.println("📧 Admin email: " + adminEmail);
+            System.out.println("👤 Admin name: " + adminName);
+            
+            // Proveri da li su email postavke konfigurisane
+            if (adminEmail == null || adminEmail.contains("example.com")) {
+                System.err.println("❌ ADMIN_EMAIL nije ispravno podešen! Trenutno: " + adminEmail);
+                throw new RuntimeException("Email konfiguracija nije ispravno podešena");
+            }
+
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
@@ -51,13 +61,29 @@ public class EmailService {
             helper.setText(htmlContent, true);
 
             // Slanje email-a
+            System.out.println("📤 Slanjem email-a na " + adminEmail + "...");
             mailSender.send(message);
             
             System.out.println("✅ Email notifikacija je uspešno poslana na: " + adminEmail);
             
-        } catch (MessagingException e) {
-            System.err.println("❌ Greška pri slanju email notifikacije: " + e.getMessage());
-            // Ne bacamo grešku dalje jer ne želimo da prekidamo čuvanje kontakta
+        } catch (Exception e) {
+            System.err.println("❌ DETALJINA GREŠKA pri slanju email notifikacije:");
+            System.err.println("   Tip greške: " + e.getClass().getSimpleName());
+            System.err.println("   Poruka: " + e.getMessage());
+            System.err.println("   Admin email: " + adminEmail);
+            
+            // Proveri osnovnu konfiguraciju
+            System.err.println("🔍 Email konfiguracija debug:");
+            System.err.println("   EMAIL_USERNAME env var: " + System.getenv("EMAIL_USERNAME"));
+            System.err.println("   ADMIN_EMAIL env var: " + System.getenv("ADMIN_EMAIL"));
+            
+            if (e.getCause() != null) {
+                System.err.println("   Uzrok: " + e.getCause().getMessage());
+            }
+            e.printStackTrace();
+            
+            // Bacamo grešku dalje da se prikaže u frontend-u
+            throw new RuntimeException("Email slanje neuspešno: " + e.getMessage(), e);
         }
     }
 
@@ -145,6 +171,9 @@ public class EmailService {
      */
     public void sendAutoReplyEmail(Contact contact) {
         try {
+            System.out.println("🔄 Pokušavam slanje auto-reply email-a...");
+            System.out.println("📧 Pošaljiocu: " + contact.getEmail());
+
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
@@ -158,12 +187,22 @@ public class EmailService {
             helper.setText(htmlContent, true);
 
             // Slanje email-a
+            System.out.println("📤 Slanjem auto-reply email-a na " + contact.getEmail() + "...");
             mailSender.send(message);
             
             System.out.println("✅ Auto-reply email je uspešno poslan na: " + contact.getEmail());
             
-        } catch (MessagingException e) {
-            System.err.println("❌ Greška pri slanju auto-reply email-a: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("❌ DETALJINA GREŠKA pri slanju auto-reply email-a:");
+            System.err.println("   Tip greške: " + e.getClass().getSimpleName());
+            System.err.println("   Poruka: " + e.getMessage());
+            System.err.println("   Email pošaljiocu: " + contact.getEmail());
+            
+            if (e.getCause() != null) {
+                System.err.println("   Uzrok: " + e.getCause().getMessage());
+            }
+            e.printStackTrace();
+            
             // Ne bacamo grešku dalje jer ne želimo da prekidamo čuvanje kontakta
         }
     }
