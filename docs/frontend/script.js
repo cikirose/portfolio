@@ -413,20 +413,30 @@ function initContactForm() {
                 message: message
             };
             
-            // Send email using EmailJS (works with GitHub Pages!)
-            // First, check if EmailJS is loaded
+            // Send email using EmailJS (GitHub Pages compatible!)
+            console.log('🚀 Koristim EmailJS za slanje email-a...');
+            
+            // Check if EmailJS is loaded
             if (typeof emailjs === 'undefined') {
-                console.warn('EmailJS nije učitan. Učitavam ga sada...');
+                console.log('📦 Učitavam EmailJS biblioteku...');
                 
                 // Load EmailJS dynamically
                 const script = document.createElement('script');
                 script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
                 script.onload = () => {
+                    console.log('✅ EmailJS biblioteka učitana!');
                     emailjs.init('eZ1ToHn60D72IrUw-'); // Public Key
                     sendEmailViaEmailJS();
                 };
+                script.onerror = () => {
+                    console.error('❌ Greška pri učitavanju EmailJS biblioteke!');
+                    const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
+                    const errorMessage = translations[currentLanguage]['form.error'];
+                    showNotification(errorMessage, 'error');
+                };
                 document.head.appendChild(script);
             } else {
+                console.log('✅ EmailJS već je učitan!');
                 sendEmailViaEmailJS();
             }
             
