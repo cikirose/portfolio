@@ -440,6 +440,8 @@ function initContactForm() {
                     to_email: 'aleksandarjankovic159@gmail.com' // Tvoj email
                 };
                 
+                console.log('📧 Šaljem email sa parametrima:', templateParams);
+                
                 // Pošalji email preko EmailJS
                 emailjs.send(
                     'service_7eklp8j',    // Gmail service ID
@@ -447,13 +449,15 @@ function initContactForm() {
                     templateParams
                 )
                 .then(function(response) {
-                    console.log('Email poslat uspešno!', response.status, response.text);
+                    console.log('✅ Email poslat uspešno!', response.status, response.text);
+                    console.log('📊 Response details:', response);
                     const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
                     const successMessage = translations[currentLanguage]['form.success'];
                     showNotification(successMessage, 'success');
                     contactForm.reset();
                 }, function(error) {
-                    console.error('Greška pri slanju email-a:', error);
+                    console.error('❌ GREŠKA pri slanju email-a:', error);
+                    console.error('📋 Error details:', error.text || error.message || error);
                     const currentLanguage = document.documentElement.getAttribute('lang') || 'sr';
                     const errorMessage = translations[currentLanguage]['form.error'];
                     showNotification(errorMessage, 'error');
