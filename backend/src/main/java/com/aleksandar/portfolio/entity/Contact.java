@@ -3,7 +3,6 @@ package com.aleksandar.portfolio.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 /**
@@ -21,7 +20,6 @@ public class Contact {
     private Long id;
 
     @NotBlank(message = "Ime je obavezno")
-    @Size(min = 2, max = 50, message = "Ime mora biti između 2 i 50 karaktera")
     @Column(name = "name", nullable = false)
     private String name;
 
@@ -31,12 +29,10 @@ public class Contact {
     private String email;
 
     @NotBlank(message = "Naslov je obavezan")
-    @Size(min = 5, max = 100, message = "Naslov mora biti između 5 i 100 karaktera")
     @Column(name = "subject", nullable = false)
     private String subject;
 
     @NotBlank(message = "Poruka je obavezna")
-    @Size(min = 10, max = 1000, message = "Poruka mora biti između 10 i 1000 karaktera")
     @Column(name = "message", nullable = false, columnDefinition = "TEXT")
     private String message;
 
