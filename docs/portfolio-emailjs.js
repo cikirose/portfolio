@@ -3,8 +3,34 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Portfolio EmailJS Script Loaded - NO BACKEND!');
+    
+    // Remove loading screen immediately
+    removeLoadingScreen();
+    
+    // Initialize contact form
     initContactForm();
+    
+    // Initialize basic features (simplified)
+    console.log('🎯 Initializing basic portfolio features...');
 });
+
+// Remove loading screen
+function removeLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        console.log('🎯 Removing loading screen...');
+        loadingScreen.classList.add('hide');
+        document.body.classList.add('loaded');
+        
+        // Remove loading screen from DOM after transition
+        setTimeout(() => {
+            if (loadingScreen.parentNode) {
+                loadingScreen.remove();
+                console.log('✅ Loading screen removed!');
+            }
+        }, 500);
+    }
+}
 
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');

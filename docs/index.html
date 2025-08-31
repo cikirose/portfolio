@@ -293,6 +293,15 @@
         </div>
     </footer>
 
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS immediately
+        (function(){
+            emailjs.init("eZ1ToHn60D72IrUw-");
+            console.log("✅ EmailJS preloaded and initialized!");
+        })();
+    </script>
     <script src="portfolio-emailjs.js"></script>
 </body>
 </html>
