@@ -13,7 +13,7 @@ const translations = {
         
         // Hero section
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': 'Level 1 Support Point of Sale - Sainsbury\'s',
+        'hero.subtitle': 'Back End | DataBase',
         'hero.intro1': 'Student sam završne godine Visoke škole elektrotehnike i računarstva, u završnoj fazi studija (preostala odbrana diplomskog rada). Trenutno sam zaposlen u kompaniji NCR Voyix na poziciji Level 1 Support – Point of Sale za Sainsbury\'s prodavnice, gde stičem praktično iskustvo u radu sa POS sistemima i tehničkom podrškom.',
         'hero.intro2': 'Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.',
         'hero.viewWork': 'Vidi moj rad',
@@ -102,7 +102,7 @@ const translations = {
         
         // Hero section
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': 'Level 1 Support Point of Sale - Sainsbury\'s',
+        'hero.subtitle': 'Back End | DataBase',
         'hero.intro1': 'I am a final year student at the Higher School of Electrical Engineering and Computer Science, in the final phase of my studies (thesis defense remaining). I am currently employed at NCR Voyix as Level 1 Support – Point of Sale for Sainsbury\'s stores, where I am gaining practical experience working with POS systems and technical support.',
         'hero.intro2': 'I focus my interest particularly on back-end development and working with databases, with the goal of further professional development in this field. In the near future, I plan to expand my knowledge to front-end technologies as well, in order to build a complete full-stack profile.',
         'hero.viewWork': 'View my work',
@@ -260,13 +260,13 @@ function applyTranslations(language) {
         document.title = 'Aleksandar Janković Portfolio | Full Stack Developer';
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = 'Portfolio of Aleksandar Janković - Level 1 Support Point of Sale engineer with knowledge of Java, Spring Boot, Docker, MySQL. Final year student of computer engineering.';
+            metaDescription.content = 'Portfolio of Aleksandar Janković - Back End | DataBase developer with knowledge of Java, Spring Boot, Docker, MySQL. Final year student of computer engineering.';
         }
     } else {
         document.title = 'Aleksandar Janković Portfolio | Full Stack Developer';
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = 'Portfolio Aleksandra Jankovića - Level 1 Support Point of Sale engineer sa znanjem Java, Spring Boot, Docker, MySQL. Student završne godine računarske tehnike.';
+            metaDescription.content = 'Portfolio Aleksandra Jankovića - Back End | DataBase developer sa znanjem Java, Spring Boot, Docker, MySQL. Student završne godine računarske tehnike.';
         }
     }
 }
