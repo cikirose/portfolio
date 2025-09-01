@@ -65,7 +65,7 @@ const translations = {
         'cv.skills.languages.english': '<strong>Engleski:</strong> Napredni nivo',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
         
         // Contact section
         'contact.title': 'Kontaktiraj me',
@@ -80,7 +80,7 @@ const translations = {
         'contact.form.submit': 'Pošalji poruku',
         
         // Footer
-        'footer.copyright': '© 2024 Aleksandar Janković Portfolio. Sva prava zadržana.',
+        'footer.copyright': '© 2025 Aleksandar Janković Portfolio. Sva prava zadržana.',
         
         // Form notifications
         'form.fillAllFields': 'Molimo popunite sva polja.',
@@ -154,7 +154,7 @@ const translations = {
         'cv.skills.languages.english': '<strong>English:</strong> Advanced level',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video editing:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Spring Boot, Docker, MySQL, Git, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
         
         // Contact section
         'contact.title': 'Contact me',
@@ -169,7 +169,7 @@ const translations = {
         'contact.form.submit': 'Send message',
         
         // Footer
-        'footer.copyright': '© 2024 Aleksandar Janković Portfolio. All rights reserved.',
+        'footer.copyright': '© 2025 Aleksandar Janković Portfolio. All rights reserved.',
         
         // Form notifications
         'form.fillAllFields': 'Please fill in all fields.',

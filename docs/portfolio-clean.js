@@ -65,12 +65,12 @@ function applyTranslations(language) {
             'cv.skills.languages.english': '<strong>English:</strong> Advanced level',
             'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
             'cv.skills.languages.video': '<strong>Video editing:</strong> Adobe Premiere Pro, CapCut',
-            'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Spring Boot, Docker, MySQL, Git, XAMPP, DBeaver',
+            'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
             'contact.title': 'Contact me', 'contact.info.title': 'Information',
             'contact.info.location': 'Belgrade', 'contact.info.linkedin': 'LinkedIn Profile', 'contact.info.github': 'GitHub Profile',
             'contact.form.name': 'Your name', 'contact.form.email': 'Your email', 'contact.form.subject': 'Subject',
             'contact.form.message': 'Your message', 'contact.form.submit': 'Send message',
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. All rights reserved.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. All rights reserved.',
             
             // Form notifications
             'form.fillAllFields': 'Please fill in all fields.',
@@ -126,12 +126,12 @@ function applyTranslations(language) {
             'cv.skills.languages.english': '<strong>Engleski:</strong> Napredni nivo',
             'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
             'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
-            'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, XAMPP, DBeaver',
+            'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
             'contact.title': 'Kontaktiraj me', 'contact.info.title': 'Informacije',
             'contact.info.location': 'Belgrade', 'contact.info.linkedin': 'LinkedIn Profile', 'contact.info.github': 'GitHub Profile',
             'contact.form.name': 'Vaše ime', 'contact.form.email': 'Vaš email', 'contact.form.subject': 'Naslov',
             'contact.form.message': 'Vaša poruka', 'contact.form.submit': 'Pošalji poruku',
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. Sva prava zadržana.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. Sva prava zadržana.',
             
             // Form notifications
             'form.fillAllFields': 'Molimo popunite sva polja.',

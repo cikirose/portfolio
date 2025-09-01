@@ -100,7 +100,7 @@ function applyBasicTranslations(language) {
             'contact.form.submit': 'Send message',
             
             // Footer
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. All rights reserved.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. All rights reserved.',
             
             // Form messages
             'form.success': 'Message sent successfully! I will get back to you soon.',
@@ -186,7 +186,7 @@ function applyBasicTranslations(language) {
             'contact.form.submit': 'Pošalji poruku',
             
             // Footer
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. Sva prava zadržana.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. Sva prava zadržana.',
             
             // Form messages
             'form.success': 'Poruka je uspešno poslata! Odgovoriću vam uskoro.',
@@ -635,7 +635,7 @@ function initThemeToggle() {
             'contact.form.submit': 'Send message',
             
             // Footer
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. All rights reserved.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. All rights reserved.',
             
             // Form messages
             'form.success': 'Message sent successfully! I will get back to you soon.',
@@ -721,7 +721,7 @@ function initThemeToggle() {
             'contact.form.submit': 'Pošalji poruku',
             
             // Footer
-            'footer.copyright': '&copy; 2024 Aleksandar Janković Portfolio. Sva prava zadržana.',
+            'footer.copyright': '&copy; 2025 Aleksandar Janković Portfolio. Sva prava zadržana.',
             
             // Form messages
             'form.success': 'Poruka je uspešno poslata! Odgovoriću vam uskoro.',
