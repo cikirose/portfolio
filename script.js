@@ -3,7 +3,6 @@ const translations = {
     sr: {
         // Navigation
         'nav.home': 'Početna',
-        'nav.about': 'O meni',
         'nav.portfolio': 'Portfolio',
         'nav.cv': 'CV',
         'nav.contact': 'Kontakt',
@@ -13,18 +12,12 @@ const translations = {
         
         // Hero section
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': 'Back End | DataBase',
-        'hero.intro1': 'Student sam završne godine Visoke škole elektrotehnike i računarstva, u završnoj fazi studija (preostala odbrana diplomskog rada). Trenutno sam zaposlen u kompaniji NCR Voyix na poziciji Level 1 Support – Point of Sale za Sainsbury\'s prodavnice, gde stičem praktično iskustvo u radu sa POS sistemima i tehničkom podrškom.',
+        'hero.subtitle': '',
+        'hero.intro1': 'Diplomirani inženjer Visoke škole elektrotehnike i računarstva, smer Računarska tehnika. Trenutno sam zaposlen u kompaniji NCR Voyix na poziciji Level 1 Support – Point of Sale za Sainsbury\'s prodavnice, gde stičem praktično iskustvo u radu sa POS sistemima i tehničkom podrškom.',
         'hero.intro2': 'Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.',
         'hero.viewWork': 'Vidi moj rad',
         'hero.contact': 'Kontaktiraj me',
         
-        // About section
-        'about.title': 'O meni',
-        'about.paragraph1': 'Rođen sam i odrastao u Užicu, gde sam tokom srednje škole kroz različite poslove i stručnu praksu stekao svoja prva iskustva. Praksa je bila usmerena na rad sa programima vezanim za ekonomiju, koji su se u velikoj meri oslanjali na skladištenje podataka, evidenciju i njihovu funkcionalnu primenu. Upravo tu sam se prvi put susreo sa logikom baza i procesima obrade informacija, što je probudilo moje interesovanje i postavilo temelje za dalji razvoj u oblasti programiranja.',
-        'about.paragraph2': 'Nakon završetka srednje škole preselio sam se u Beograd, gde sam započeo studije elektrotehnike i računarstva i dodatno usmerio svoj put ka IT-u. Tokom studija istraživao sam različite metode programiranja, ali sam se uvek najviše zadržavao na logici kreiranja i funkcionalnosti programa. Moja pitanja su bila „Zašto?" i „Kako?" – zašto sistem funkcioniše baš tako i kako zapravo prenosi „poruku" kroz svoj tok podataka.',
-        'about.paragraph3': 'Ovakav način razmišljanja prirodno me je usmerio ka backend razvoju, a prvenstveno ka učenju Spring Boot-a. Backend mi omogućava da se bavim onim što me najviše inspiriše – razumevanjem logike podataka, povezivanjem procesa i izgradnjom stabilne osnove na kojoj se oslanja svaki funkcionalan softver.',
-        'about.skillsTitle': 'Glavne veštine:',
         
         // Portfolio section
         'portfolio.title': 'Portfolio projekti',
@@ -38,11 +31,10 @@ const translations = {
         // CV section
         'cv.title': 'CV & Obrazovanje',
         'cv.education.title': 'Obrazovanje',
-        'cv.education.college.date': '2020 - Trenutno',
+        'cv.education.college.date': '2020 - 2025',
         'cv.education.college.school': 'Visoka škola elektrotehnike i računarstva',
         'cv.education.college.field': 'Smer: Računarska tehnika',
         'cv.education.college.location': 'Mesto: Beograd',
-        'cv.education.college.status': 'Status: Završna godina (preostala odbrana diplomskog rada)',
         'cv.education.highschool.date': '2016 - 2020',
         'cv.education.highschool.school': 'Ekonomska škola Užice',
         'cv.education.highschool.field': 'Smer: Finansijski administrator',
@@ -65,7 +57,7 @@ const translations = {
         'cv.skills.languages.english': '<strong>Engleski:</strong> Napredni nivo',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
         
         // Contact section
         'contact.title': 'Kontaktiraj me',
@@ -92,7 +84,6 @@ const translations = {
     en: {
         // Navigation
         'nav.home': 'Home',
-        'nav.about': 'About',
         'nav.portfolio': 'Portfolio',
         'nav.cv': 'CV',
         'nav.contact': 'Contact',
@@ -102,18 +93,12 @@ const translations = {
         
         // Hero section
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': 'Back End | DataBase',
-        'hero.intro1': 'I am a final year student at the Higher School of Electrical Engineering and Computer Science, in the final phase of my studies (thesis defense remaining). I am currently employed at NCR Voyix as Level 1 Support – Point of Sale for Sainsbury\'s stores, where I am gaining practical experience working with POS systems and technical support.',
+        'hero.subtitle': '',
+        'hero.intro1': 'Graduated engineer from the Higher School of Electrical Engineering and Computer Science, Computer Engineering major. I am currently employed at NCR Voyix as Level 1 Support – Point of Sale for Sainsbury\'s stores, where I am gaining practical experience working with POS systems and technical support.',
         'hero.intro2': 'I focus my interest particularly on back-end development and working with databases, with the goal of further professional development in this field. In the near future, I plan to expand my knowledge to front-end technologies as well, in order to build a complete full-stack profile.',
         'hero.viewWork': 'View my work',
         'hero.contact': 'Contact me',
         
-        // About section
-        'about.title': 'About me',
-        'about.paragraph1': 'I was born and raised in Užice, where during high school through various jobs and professional practice I gained my first experiences. The practice was focused on working with economics-related programs, which largely relied on data storage, record keeping and their functional application. It was there that I first encountered database logic and information processing processes, which awakened my interest and laid the foundation for further development in the field of programming.',
-        'about.paragraph2': 'After finishing high school, I moved to Belgrade, where I started studying electrical engineering and computer science and further directed my path towards IT. During my studies, I explored different programming methods, but I always focused most on the logic of creation and functionality of programs. My questions were "Why?" and "How?" – why the system works exactly like that and how it actually transmits the "message" through its data flow.',
-        'about.paragraph3': 'This way of thinking naturally directed me towards backend development, primarily towards learning Spring Boot. Backend allows me to deal with what inspires me most – understanding data logic, connecting processes and building a stable foundation on which every functional software relies.',
-        'about.skillsTitle': 'Main skills:',
         
         // Portfolio section
         'portfolio.title': 'Portfolio projects',
@@ -127,11 +112,10 @@ const translations = {
         // CV section
         'cv.title': 'CV & Education',
         'cv.education.title': 'Education',
-        'cv.education.college.date': '2020 - Present',
+        'cv.education.college.date': '2020 - 2025',
         'cv.education.college.school': 'Higher School of Electrical Engineering and Computer Science',
         'cv.education.college.field': 'Field: Computer Engineering',
         'cv.education.college.location': 'Location: Belgrade',
-        'cv.education.college.status': 'Status: Final year (thesis defense remaining)',
         'cv.education.highschool.date': '2016 - 2020',
         'cv.education.highschool.school': 'Economic School Užice',
         'cv.education.highschool.field': 'Field: Financial Administrator',
@@ -154,7 +138,7 @@ const translations = {
         'cv.skills.languages.english': '<strong>English:</strong> Advanced level',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video editing:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Spring Boot, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
         
         // Contact section
         'contact.title': 'Contact me',
@@ -257,16 +241,16 @@ function applyTranslations(language) {
     
     // Update document title and meta tags based on language
     if (language === 'en') {
-        document.title = 'Aleksandar Janković Portfolio | Full Stack Developer';
+        document.title = 'Aleksandar Janković Portfolio';
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = 'Portfolio of Aleksandar Janković - Back End | DataBase developer with knowledge of Java, Spring Boot, Docker, MySQL. Final year student of computer engineering.';
+            metaDescription.content = 'Portfolio of Aleksandar Janković - developer with knowledge of Java, Docker, MySQL. Final year student of computer engineering.';
         }
     } else {
-        document.title = 'Aleksandar Janković Portfolio | Full Stack Developer';
+        document.title = 'Aleksandar Janković Portfolio';
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = 'Portfolio Aleksandra Jankovića - Back End | DataBase developer sa znanjem Java, Spring Boot, Docker, MySQL. Student završne godine računarske tehnike.';
+            metaDescription.content = 'Portfolio Aleksandra Jankovića - developer sa znanjem Java, Docker, MySQL. Diplomirani inženjer računarske tehnike.';
         }
     }
 }
