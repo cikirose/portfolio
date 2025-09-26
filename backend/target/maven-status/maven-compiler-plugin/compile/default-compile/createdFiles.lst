@@ -1,6 +1,0 @@
-com\aleksandar\portfolio\entity\Contact.class
-com\aleksandar\portfolio\config\DataInitializer.class
-com\aleksandar\portfolio\controller\ContactController.class
-com\aleksandar\portfolio\PortfolioApplication.class
-com\aleksandar\portfolio\repository\ContactRepository.class
-com\aleksandar\portfolio\service\ContactService.class
