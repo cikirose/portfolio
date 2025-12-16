@@ -63,7 +63,8 @@ const translations = {
         'cv.skills.languages.english': '<strong>Engleski:</strong> Napredni nivo',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programiranje:</strong> Java, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programiranje/Alati:</strong> Java, Python, MySQL, Docker, Git, EmailJS',
+        'cv.skills.languages.vestine': '<strong>Vestine</strong> MultiTasking, Odgovornost, Komunikacija, Analitičke veštine',
         
         // Contact section
         'contact.title': 'Kontaktiraj me',
@@ -150,7 +151,8 @@ const translations = {
         'cv.skills.languages.english': '<strong>English:</strong> Advanced level',
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video editing:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programming:</strong> Java, Docker, MySQL, Git, EmailJS, XAMPP, DBeaver',
+        'cv.skills.languages.programming': '<strong>Programming/Tools:</strong> Java, Python, MySQL, Docker, Git, EmailJS',
+        'cv.skills.languages.vestine': '<strong>Skills:</strong> MultiTasking, Responsibility, Communication, Analytical skills',
         
         // Contact section
         'contact.title': 'Contact me',
