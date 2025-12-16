@@ -64,7 +64,7 @@ const translations = {
         'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
         'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
         'cv.skills.languages.programming': '<strong>Programiranje/Alati:</strong> Java, Python, MySQL, Docker, Git, EmailJS',
-        'cv.skills.languages.vestine': '<strong>Vestine</strong> MultiTasking, Odgovornost, Komunikacija, Analitičke veštine',
+        'cv.skills.languages.vestine': '<strong>Veštine:</strong> MultiTasking, Odgovornost, Komunikacija, Analitičke veštine',
         
         // Contact section
         'contact.title': 'Kontaktiraj me',
