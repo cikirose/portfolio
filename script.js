@@ -13,7 +13,7 @@ const translations = {
         // Hero section
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
         'hero.subtitle': '',
-        'hero.intro1': 'Diplomirani inženjer Visoke škole elektrotehnike i računarstva, smer Računarska tehnika. Trenutno sam zaposlen u kompaniji NCR Voyix na poziciji Level 1 Support – Point of Sale za Sainsbury\'s prodavnice, gde stičem praktično iskustvo u radu sa POS sistemima i tehničkom podrškom.',
+        'hero.intro1': 'Diplomirani inženjer Računarske tehnike. Trenutno sam zaposlen u kompaniji EB Infinity (Remote, USA), gde upravljam podacima za sopstveni portfolio od preko 70 kamiona, radeći sa digitalnim sistemima, strukturisanim podacima i bazama, uz fokus na tačnost evidencije, organizaciju procesa i unapređenje sistema.',
         'hero.intro2': 'Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.',
         'hero.viewWork': 'Vidi moj rad',
         'hero.contact': 'Kontaktiraj me',
@@ -94,7 +94,7 @@ const translations = {
         // Hero section
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
         'hero.subtitle': '',
-        'hero.intro1': 'Graduated engineer from the Higher School of Electrical Engineering and Computer Science, Computer Engineering major. I am currently employed at NCR Voyix as Level 1 Support – Point of Sale for Sainsbury\'s stores, where I am gaining practical experience working with POS systems and technical support.',
+        'hero.intro1': 'Graduated Computer Engineering engineer. I am currently employed at EB Infinity (Remote, USA), where I manage data for my own portfolio of over 70 trucks, working with digital systems, structured data and databases, with a focus on record accuracy, process organization and system improvement.',
         'hero.intro2': 'I focus my interest particularly on back-end development and working with databases, with the goal of further professional development in this field. In the near future, I plan to expand my knowledge to front-end technologies as well, in order to build a complete full-stack profile.',
         'hero.viewWork': 'View my work',
         'hero.contact': 'Contact me',
