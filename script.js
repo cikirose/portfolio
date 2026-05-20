@@ -1,85 +1,112 @@
 // Translation data
 const translations = {
     sr: {
-        // Navigation
-        'nav.home': 'Početna',
-        'nav.portfolio': 'Portfolio',
-        'nav.cv': 'CV',
+        'nav.about': 'O meni',
+        'nav.work': 'Projekti',
+        'nav.experience': 'Iskustvo',
+        'nav.skills': 'Veštine',
         'nav.contact': 'Kontakt',
-        
-        // Loading
-        'loading.text': 'Učitavanje portfolija...',
-        
-        // Hero section
+
+        'hero.badge': 'Zaposlen · Otvoren za customer service uloge',
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': '',
-        'hero.intro1': 'Diplomirani inženjer Računarske tehnike. Trenutno sam zaposlen u kompaniji EB Infinity (Remote, USA), gde upravljam podacima za sopstveni portfolio od preko 70 kamiona, radeći sa digitalnim sistemima, strukturisanim podacima i bazama, uz fokus na tačnost evidencije, organizaciju procesa i unapređenje sistema.',
-        'hero.intro2': 'Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.',
-        'hero.viewWork': 'Vidi moj rad',
+        'hero.subtitle': 'Customer service & operativna podrška · Java & podaci · pouzdana komunikacija na engleskom',
+        'hero.intro': 'Diplomirani inženjer računarske tehnike sa višegodišnjim iskustvom u korisničkoj podršci, remote timovima i radu sa klijentima. Trenutno radim remote za kompaniju iz SAD-a; otvoren sam za sve vrste customer service poslova — uz paralelni razvoj u back-endu.',
+        'hero.viewProfile': 'Moj profil',
         'hero.contact': 'Kontaktiraj me',
-        
-        
-        // Portfolio section
-        'portfolio.title': 'Portfolio projekti',
-        'portfolio.teamble.title': 'Teamble - Project Manager Aplikacija',
-        'portfolio.teamble.description': 'Aplikacija dizajnirana za efikasnu organizaciju i praćenje projekata, zadataka i timske saradnje',
-        'portfolio.teambuildstay.title': 'TeamBuildStay - Rezervacije kuća',
-        'portfolio.teambuildstay.description': 'Aplikacija koja omogućava jednostavno pretraživanje i rezervaciju privatnih kuća, posebno namenjenih za organizaciju team building događaja',
-        'portfolio.video.title': 'Video Montaža Projekti',
-        'portfolio.video.description': 'Profesionalni video montaža projekti koristeći Adobe Premiere Pro i CapCut',
-        
-        // CV section
-        'cv.title': 'CV & Obrazovanje',
-        'cv.education.title': 'Obrazovanje',
-        'cv.education.college.date': '2020 - 2025',
-        'cv.education.college.school': 'Visoka škola elektrotehnike i računarstva',
-        'cv.education.college.field': 'Smer: Računarska tehnika',
-        'cv.education.college.location': 'Mesto: Beograd',
-        'cv.education.highschool.date': '2016 - 2020',
-        'cv.education.highschool.school': 'Ekonomska škola Užice',
-        'cv.education.highschool.field': 'Smer: Finansijski administrator',
-        'cv.education.highschool.location': 'Mesto: Užice',
-        'cv.experience.title': 'Radno iskustvo',
-        'cv.experience.current.date': 'Oktobar 2025 - Trenutno',
-        'cv.experience.current.position': 'EB Infinity - Fleet Maintenance Representative',
+
+        'about.label': 'Profil',
+        'about.title': 'O meni',
+        'about.lead': 'Fokusiram se na customer service i tehničku podršku, često sa klijentima iz inostranstva na engleskom. Tražim remote, hibrid ili office ulogu gde mogu odmah da doprinesem timu.',
+        'about.p1': 'Godinama radim u okruženjima gde su tačnost, brzina odgovora i jasna komunikacija ključni: od fleet operacija i koordinacije sa vozačima i servisima u SAD-u, preko Level 1 POS podrške za Sainsbury\'s, do današnjeg posla u EB Infinity gde vodim evidencije, obučavam kolege i rešavam operativne probleme pod pritiskom.',
+        'about.p2': 'Klijenti i timovi na mene se oslanjaju zbog strpljenja, strukturisanog pristupa i naprednog engleskog. U isto vreme razvijam back-end veštine (Java, MySQL) kroz akademske i lične projekte — spreman sam da te oblasti gradim dalje, ali customer service ostaje moja snažna strana i svesno tražim te prilike.',
+        'about.tag1': 'Customer service',
+        'about.tag2': 'Remote · EN',
+        'about.tag3': 'Tehnička podrška',
+        'about.tag4': 'Java · MySQL',
+        'about.card.status': 'Status',
+        'about.card.statusValue': 'Zaposlen · Remote (USA)',
+        'about.card.focus': 'Fokus',
+        'about.card.focusValue': 'CS, podrška, operacije',
+        'about.card.education': 'Obrazovanje',
+        'about.card.educationValue': 'Dipl. inž. računarske tehnike',
+        'about.video': 'Povremeno radim i video montažu (Premiere Pro, CapCut) — po potrebi mogu poslati reference.',
+
+        'work.label': 'Razvoj',
+        'work.title': 'Projekti',
+        'work.subtitle': 'Java i Python projekti — dokaz tehničkog rasta pored operativnog iskustva.',
+        'portfolio.teamble.role': 'Timski projekat · Project management',
+        'portfolio.teamble.title': 'Teamble',
+        'portfolio.teamble.description': 'Organizacija projekata, zadataka i timske saradnje — CRUD, uloge i praćenje statusa.',
+        'portfolio.teambuildstay.role': 'Diplomski rad · Rezervacije',
+        'portfolio.teambuildstay.title': 'TeamBuildStay',
+        'portfolio.teambuildstay.description': 'Pretraga i rezervacija smeštaja — filtriranje, dostupnost i upravljanje rezervacijama.',
+        'portfolio.viewGithub': 'GitHub',
+        'portfolio.spotify.role': 'Lični projekat · Python',
+        'portfolio.spotify.title': 'Spotify podsetnik',
+        'portfolio.spotify.description': 'Mala Python skripta koja prati ko je na redu da plati zajedničku pretplatu — jednostavno, ali korisno u praksi.',
+        'work.moreText': 'Još mnogo drugih projekata na Gitu — Python, Java i alati koje sam pravio uz učenje.',
+        'work.moreButton': 'Pogledaj GitHub',
+
+        'services.label': 'Usluge',
+        'services.title': 'Šta nudim',
+        'services.cs.title': 'Customer service',
+        'services.cs.description': 'Podrška korisnicima, rešavanje pritužbi, praćenje zahteva i profesionalna komunikacija — remote ili na licu mesta.',
+        'services.support.title': 'Tehnička podrška',
+        'services.support.description': 'POS sistemi, incidenti pod pritiskom, dijagnostika i rad sa korporativnim alatima.',
+        'services.data.title': 'Podaci i operacije',
+        'services.data.description': 'Evidencije, tačan unos podataka, analiza i optimizacija procesa u digitalnim sistemima.',
+        'services.dev.title': 'Back-end razvoj',
+        'services.dev.description': 'Java aplikacije i MySQL — za timove koji traže junior profil sa realnim projektima.',
+
+        'experience.label': 'Karijera',
+        'experience.title': 'Iskustvo',
+        'cv.experience.current.date': 'Oktobar 2025 — Trenutno',
+        'cv.experience.current.position': 'EB Infinity — Fleet Maintenance Representative',
         'cv.experience.current.company': 'Remote, USA',
-        'cv.experience.current.task1': 'Rad sa strukturisanim podacima i bazama evidencija (servisi, kvarovi, troškovi), uključujući unos, ažuriranje i analizu podataka',
-        'cv.experience.current.task2': 'Obuka novih zaposlenih za rad u sistemima, razumevanje procesa i poštovanje kompanijskih pravila',
-        'cv.experience.current.task3': 'Analiza operativnih i servisnih podataka radi optimizacije procesa i smanjenja downtime-a flote',
-        'cv.experience.previous.date': 'April 2025 - Oktobar 2025',
-        'cv.experience.previous.position': 'Level 1 Support Point of Sale - Sainsbury\'s',
-        'cv.experience.previous.company': 'NCR Voyix - Beograd',
-        'cv.experience.previous.task1': 'Snažna tehnička osnova: Veštine u dijagnostici, održavanju i optimizaciji POS i samouslužnih kasa',
-        'cv.experience.previous.task2': 'Analitičko razmišljanje i rešavanje problema pod pritiskom vremena',
-        'cv.experience.previous.task3': 'Rad sa IT infrastrukturom i korporativnim softverskim alatima',
-        'cv.experience.previous2.date': 'Januar 2024 - April 2025',
+        'cv.experience.current.task1': 'Korisnička i operativna podrška: strukturisani podaci, evidencije, komunikacija sa timom',
+        'cv.experience.current.task2': 'Obuka novih zaposlenih i konzistentnost u radu sa sistemima',
+        'cv.experience.current.task3': 'Analiza podataka radi smanjenja zastoja i boljih procesa',
+        'cv.experience.previous.date': 'April — Oktobar 2025',
+        'cv.experience.previous.position': 'Level 1 POS Support — Sainsbury\'s',
+        'cv.experience.previous.company': 'NCR Voyix · Beograd',
+        'cv.experience.previous.task1': 'Front-line tehnička podrška za POS i samouslužne kase',
+        'cv.experience.previous.task2': 'Rešavanje problema pod vremenskim pritiskom',
+        'cv.experience.previous.task3': 'Rad sa IT infrastrukturom i korporativnim alatima',
+        'cv.experience.previous2.date': 'Januar 2024 — April 2025',
         'cv.experience.previous2.position': 'Fleet Maintenance Support',
-        'cv.experience.previous2.company': 'SMJ-Freight - Remote',
-        'cv.experience.previous2.task1': 'Održavanje i kontrola redovnih inspekcija i popravki vozila',
-        'cv.experience.previous2.task2': 'Efikasna komunikacija sa vozačima, mehaničarima i menadžerima',
-        'cv.experience.previous2.task3': 'Profesionalna komunikacija sa servisima širom SAD-a',
-        'cv.skills.title': 'Dodatne veštine',
-        'cv.skills.languages.title': 'Jezici i softver',
-        'cv.skills.languages.english': '<strong>Engleski:</strong> Napredni nivo',
-        'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
-        'cv.skills.languages.video': '<strong>Video montaža:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programiranje/Alati:</strong> Java, Python, MySQL, Docker, Git, EmailJS',
-        'cv.skills.languages.vestine': '<strong>Veštine:</strong> MultiTasking, Odgovornost, Komunikacija, Analitičke veštine',
-        
-        // Contact section
-        'contact.title': 'Kontaktiraj me',
-        'contact.info.title': 'Informacije',
-        'contact.info.location': 'Belgrade',
-        'contact.info.linkedin': 'LinkedIn Profile',
-        'contact.info.github': 'GitHub Profile',
-        'contact.form.name': 'Vaše ime',
-        'contact.form.email': 'Vaš email',
+        'cv.experience.previous2.company': 'SMJ-Freight · Remote',
+        'cv.experience.previous2.task1': 'Koordinacija sa vozačima, servisima i menadžmentom (EN)',
+        'cv.experience.previous2.task2': 'Evidencija inspekcija, popravki i operativnih podataka',
+        'cv.education.college.date': '2020 — 2025',
+        'cv.education.college.school': 'Visoka škola elektrotehnike i računarstva',
+        'cv.education.college.field': 'Dipl. inž. računarske tehnike · Beograd',
+
+        'skills.label': 'Kompetencije',
+        'skills.title': 'Veštine',
+        'skills.cs.label': 'Customer service',
+        'skills.cs.1': 'Korisnička podrška',
+        'skills.cs.2': 'Reklamacije',
+        'skills.cs.3': 'Remote komunikacija',
+        'skills.tech.label': 'Tehnologija',
+        'skills.soft.label': 'Lične veštine',
+        'skills.soft.english': 'Engleski (napredno)',
+        'skills.soft.patience': 'Strpljenje',
+        'skills.soft.analytical': 'Analitika',
+        'skills.soft.multitask': 'Multitasking',
+
+        'contact.label': 'Kontakt',
+        'contact.subtitle': 'Za customer service, podršku ili saradnju.',
+        'contact.info.location': 'Beograd, Srbija',
+        'contact.info.linkedin': 'LinkedIn',
+        'contact.info.github': 'GitHub',
+        'contact.form.name': 'Ime',
+        'contact.form.email': 'Email',
         'contact.form.subject': 'Naslov',
-        'contact.form.message': 'Vaša poruka',
+        'contact.form.message': 'Poruka',
         'contact.form.submit': 'Pošalji poruku',
-        
-        // Footer
-        'footer.copyright': '© 2025 Aleksandar Janković Portfolio. Sva prava zadržana.',
+
+        'footer.copyright': '© 2026 Aleksandar Janković',
+        'footer.top': 'Na vrh',
         
         // Form notifications
         'form.fillAllFields': 'Molimo popunite sva polja.',
@@ -89,85 +116,112 @@ const translations = {
         'form.error': 'Greška pri slanju poruke. Pokušaj ponovo.'
     },
     en: {
-        // Navigation
-        'nav.home': 'Home',
-        'nav.portfolio': 'Portfolio',
-        'nav.cv': 'CV',
+        'nav.about': 'About',
+        'nav.work': 'Projects',
+        'nav.experience': 'Experience',
+        'nav.skills': 'Skills',
         'nav.contact': 'Contact',
-        
-        // Loading
-        'loading.text': 'Loading portfolio...',
-        
-        // Hero section
+
+        'hero.badge': 'Employed · Open to customer service roles',
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
-        'hero.subtitle': '',
-        'hero.intro1': 'Graduated Computer Engineering engineer. I am currently employed at EB Infinity (Remote, USA), where I manage data for my own portfolio of over 70 trucks, working with digital systems, structured data and databases, with a focus on record accuracy, process organization and system improvement.',
-        'hero.intro2': 'I focus my interest particularly on back-end development and working with databases, with the goal of further professional development in this field. In the near future, I plan to expand my knowledge to front-end technologies as well, in order to build a complete full-stack profile.',
-        'hero.viewWork': 'View my work',
+        'hero.subtitle': 'Customer service & operations support · Java & data · reliable communication in English',
+        'hero.intro': 'Computer engineering graduate with years of experience in customer support, remote teams, and client-facing work. I currently work remotely for a US company; I am open to all types of customer service roles — while continuing to grow in back-end development.',
+        'hero.viewProfile': 'My profile',
         'hero.contact': 'Contact me',
-        
-        
-        // Portfolio section
-        'portfolio.title': 'Portfolio projects',
-        'portfolio.teamble.title': 'Teamble - Project Manager Application',
-        'portfolio.teamble.description': 'Application designed for efficient organization and tracking of projects, tasks and team collaboration',
-        'portfolio.teambuildstay.title': 'TeamBuildStay - House Reservations',
-        'portfolio.teambuildstay.description': 'Application that enables easy search and reservation of private houses, specially designed for organizing team building events',
-        'portfolio.video.title': 'Video Editing Projects',
-        'portfolio.video.description': 'Professional video editing projects using Adobe Premiere Pro and CapCut',
-        
-        // CV section
-        'cv.title': 'CV & Education',
-        'cv.education.title': 'Education',
-        'cv.education.college.date': '2020 - 2025',
-        'cv.education.college.school': 'Higher School of Electrical Engineering and Computer Science',
-        'cv.education.college.field': 'Field: Computer Engineering',
-        'cv.education.college.location': 'Location: Belgrade',
-        'cv.education.highschool.date': '2016 - 2020',
-        'cv.education.highschool.school': 'Economic School Užice',
-        'cv.education.highschool.field': 'Field: Financial Administrator',
-        'cv.education.highschool.location': 'Location: Užice',
-        'cv.experience.title': 'Work experience',
-        'cv.experience.current.date': 'October 2025 - Present',
-        'cv.experience.current.position': 'EB Infinity - Fleet Maintenance Representative',
+
+        'about.label': 'Profile',
+        'about.title': 'About me',
+        'about.lead': 'I focus on customer service and technical support, often with international clients in English. Looking for remote, hybrid, or on-site roles where I can contribute from day one.',
+        'about.p1': 'I have worked in environments where accuracy, fast response, and clear communication matter: from fleet operations and coordination with drivers and vendors across the US, through Level 1 POS support for Sainsbury\'s, to my current role at EB Infinity where I manage records, train colleagues, and solve operational issues under pressure.',
+        'about.p2': 'Clients and teams rely on me for patience, a structured approach, and advanced English. I am also building back-end skills (Java, MySQL) through academic and personal projects — happy to grow further in tech, but customer service remains a core strength and I actively seek those opportunities.',
+        'about.tag1': 'Customer service',
+        'about.tag2': 'Remote · EN',
+        'about.tag3': 'Technical support',
+        'about.tag4': 'Java · MySQL',
+        'about.card.status': 'Status',
+        'about.card.statusValue': 'Employed · Remote (USA)',
+        'about.card.focus': 'Focus',
+        'about.card.focusValue': 'CS, support, operations',
+        'about.card.education': 'Education',
+        'about.card.educationValue': 'BSc Computer Engineering',
+        'about.video': 'I also do occasional video editing (Premiere Pro, CapCut) — references available on request.',
+
+        'work.label': 'Development',
+        'work.title': 'Projects',
+        'work.subtitle': 'Java and Python projects — proof of technical growth alongside operational experience.',
+        'portfolio.teamble.role': 'Team project · Project management',
+        'portfolio.teamble.title': 'Teamble',
+        'portfolio.teamble.description': 'Project, task, and team collaboration — CRUD, roles, and status tracking.',
+        'portfolio.teambuildstay.role': 'Thesis · Bookings',
+        'portfolio.teambuildstay.title': 'TeamBuildStay',
+        'portfolio.teambuildstay.description': 'Search and book stays — filtering, availability, and reservation management.',
+        'portfolio.viewGithub': 'GitHub',
+        'portfolio.spotify.role': 'Personal project · Python',
+        'portfolio.spotify.title': 'Spotify reminder',
+        'portfolio.spotify.description': 'A small Python script that tracks whose turn it is to pay a shared subscription — simple, but handy in practice.',
+        'work.moreText': 'Many more projects on GitHub — Python, Java, and tools I built while learning.',
+        'work.moreButton': 'View GitHub',
+
+        'services.label': 'Services',
+        'services.title': 'What I offer',
+        'services.cs.title': 'Customer service',
+        'services.cs.description': 'User support, complaint handling, request tracking, and professional communication — remote or on-site.',
+        'services.support.title': 'Technical support',
+        'services.support.description': 'POS systems, incidents under pressure, diagnostics, and corporate tools.',
+        'services.data.title': 'Data & operations',
+        'services.data.description': 'Records, accurate data entry, analysis, and process optimization in digital systems.',
+        'services.dev.title': 'Back-end development',
+        'services.dev.description': 'Java and MySQL — for teams looking for a junior profile with real projects.',
+
+        'experience.label': 'Career',
+        'experience.title': 'Experience',
+        'cv.experience.current.date': 'October 2025 — Present',
+        'cv.experience.current.position': 'EB Infinity — Fleet Maintenance Representative',
         'cv.experience.current.company': 'Remote, USA',
-        'cv.experience.current.task1': 'Working with structured data and record databases (services, breakdowns, costs), including data entry, updates and analysis',
-        'cv.experience.current.task2': 'Training new employees to work in systems, understanding processes and respecting company rules',
-        'cv.experience.current.task3': 'Analysis of operational and service data to optimize processes and reduce fleet downtime',
-        'cv.experience.previous.date': 'April 2025 - October 2025',
-        'cv.experience.previous.position': 'Level 1 Support Point of Sale - Sainsbury\'s',
-        'cv.experience.previous.company': 'NCR Voyix - Belgrade',
-        'cv.experience.previous.task1': 'Strong technical foundation: Skills in diagnostics, maintenance and optimization of POS and self-service checkouts',
-        'cv.experience.previous.task2': 'Analytical thinking and problem solving under time pressure',
-        'cv.experience.previous.task3': 'Working with IT infrastructure and corporate software tools',
-        'cv.experience.previous2.date': 'January 2024 - April 2025',
+        'cv.experience.current.task1': 'Customer and operations support: structured data, records, team communication',
+        'cv.experience.current.task2': 'Onboarding new staff and consistency in system usage',
+        'cv.experience.current.task3': 'Data analysis to reduce downtime and improve processes',
+        'cv.experience.previous.date': 'April — October 2025',
+        'cv.experience.previous.position': 'Level 1 POS Support — Sainsbury\'s',
+        'cv.experience.previous.company': 'NCR Voyix · Belgrade',
+        'cv.experience.previous.task1': 'Front-line technical support for POS and self-checkout',
+        'cv.experience.previous.task2': 'Problem solving under time pressure',
+        'cv.experience.previous.task3': 'IT infrastructure and corporate software tools',
+        'cv.experience.previous2.date': 'January 2024 — April 2025',
         'cv.experience.previous2.position': 'Fleet Maintenance Support',
-        'cv.experience.previous2.company': 'SMJ-Freight - Remote',
-        'cv.experience.previous2.task1': 'Maintenance and control of regular vehicle inspections and repairs',
-        'cv.experience.previous2.task2': 'Efficient communication with drivers, mechanics and managers',
-        'cv.experience.previous2.task3': 'Professional communication with services across the USA',
-        'cv.skills.title': 'Additional skills',
-        'cv.skills.languages.title': 'Languages and software',
-        'cv.skills.languages.english': '<strong>English:</strong> Advanced level',
-        'cv.skills.languages.office': '<strong>MS Office:</strong> Word, Excel, PowerPoint',
-        'cv.skills.languages.video': '<strong>Video editing:</strong> Adobe Premiere Pro, CapCut',
-        'cv.skills.languages.programming': '<strong>Programming/Tools:</strong> Java, Python, MySQL, Docker, Git, EmailJS',
-        'cv.skills.languages.vestine': '<strong>Skills:</strong> MultiTasking, Responsibility, Communication, Analytical skills',
-        
-        // Contact section
-        'contact.title': 'Contact me',
-        'contact.info.title': 'Information',
-        'contact.info.location': 'Belgrade',
-        'contact.info.linkedin': 'LinkedIn Profile',
-        'contact.info.github': 'GitHub Profile',
-        'contact.form.name': 'Your name',
-        'contact.form.email': 'Your email',
+        'cv.experience.previous2.company': 'SMJ-Freight · Remote',
+        'cv.experience.previous2.task1': 'Coordination with drivers, vendors, and management (EN)',
+        'cv.experience.previous2.task2': 'Inspection, repair, and operational records',
+        'cv.education.college.date': '2020 — 2025',
+        'cv.education.college.school': 'Higher School of Electrical Engineering and Computer Science',
+        'cv.education.college.field': 'BSc Computer Engineering · Belgrade',
+
+        'skills.label': 'Competencies',
+        'skills.title': 'Skills',
+        'skills.cs.label': 'Customer service',
+        'skills.cs.1': 'User support',
+        'skills.cs.2': 'Complaints',
+        'skills.cs.3': 'Remote communication',
+        'skills.tech.label': 'Technology',
+        'skills.soft.label': 'Soft skills',
+        'skills.soft.english': 'English (advanced)',
+        'skills.soft.patience': 'Patience',
+        'skills.soft.analytical': 'Analytics',
+        'skills.soft.multitask': 'Multitasking',
+
+        'contact.label': 'Contact',
+        'contact.subtitle': 'For customer service, support, or collaboration.',
+        'contact.info.location': 'Belgrade, Serbia',
+        'contact.info.linkedin': 'LinkedIn',
+        'contact.info.github': 'GitHub',
+        'contact.form.name': 'Name',
+        'contact.form.email': 'Email',
         'contact.form.subject': 'Subject',
-        'contact.form.message': 'Your message',
+        'contact.form.message': 'Message',
         'contact.form.submit': 'Send message',
-        
-        // Footer
-        'footer.copyright': '© 2025 Aleksandar Janković Portfolio. All rights reserved.',
+
+        'footer.copyright': '© 2026 Aleksandar Janković',
+        'footer.top': 'Back to top',
         
         // Form notifications
         'form.fillAllFields': 'Please fill in all fields.',
@@ -186,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initContactForm();
     initScrollEffects();
-    initPortfolioItems();
 });
 
 // Language Toggle functionality
@@ -254,17 +307,16 @@ function applyTranslations(language) {
     });
     
     // Update document title and meta tags based on language
+    const metaDescription = document.querySelector('meta[name="description"]');
     if (language === 'en') {
-        document.title = 'Aleksandar Janković Portfolio';
-        const metaDescription = document.querySelector('meta[name="description"]');
+        document.title = 'Aleksandar Janković — Customer Service & Technology';
         if (metaDescription) {
-            metaDescription.content = 'Portfolio of Aleksandar Janković - developer with knowledge of Java, Docker, MySQL. Final year student of computer engineering.';
+            metaDescription.content = 'Customer service professional with remote US experience, technical support background, and Java projects.';
         }
     } else {
-        document.title = 'Aleksandar Janković Portfolio';
-        const metaDescription = document.querySelector('meta[name="description"]');
+        document.title = 'Aleksandar Janković — Customer Service & Tehnologija';
         if (metaDescription) {
-            metaDescription.content = 'Portfolio Aleksandra Jankovića - developer sa znanjem Java, Docker, MySQL. Diplomirani inženjer računarske tehnike.';
+            metaDescription.content = 'Iskustvo u customer service i remote podršci, uz Java projekte. Portfolio Aleksandra Jankovića.';
         }
     }
 }
@@ -313,7 +365,7 @@ function initThemeToggle() {
 function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-logo');
 
     // Mobile menu toggle
     if (hamburger) {
@@ -326,10 +378,12 @@ function initNavigation() {
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) return;
+
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
@@ -337,7 +391,6 @@ function initNavigation() {
                 });
             }
 
-            // Close mobile menu if open
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
@@ -345,27 +398,25 @@ function initNavigation() {
         });
     });
 
-    // Active navigation link highlighting
+    const navbar = document.getElementById('navbar');
+    const scrollTargets = document.querySelectorAll('header[id], section[id]');
+
     window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
+        if (navbar) {
+            navbar.classList.toggle('scrolled', window.scrollY > 8);
+        }
+
+        let current = 'home';
+        scrollTargets.forEach(target => {
+            if (window.scrollY >= target.offsetTop - 120) {
+                current = target.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
-    });
+    }, { passive: true });
 }
 
 // Contact form functionality
@@ -537,63 +588,17 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Scroll effects
 function initScrollEffects() {
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        
-        if (hero) {
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    });
-    
-    // Fade in elements on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all sections
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-}
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        }),
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
 
-// Portfolio items functionality
-function initPortfolioItems() {
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Add click effect
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 150);
-            
-            // Here you could add modal or navigation to project details
-            console.log('Portfolio item clicked:', this.querySelector('h3').textContent);
-        });
-        
-        // Add hover effects
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
+    document.querySelectorAll('section, .hero').forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
     });
 }
 
@@ -622,20 +627,3 @@ window.addEventListener('resize', debounce(function() {
     }
 }, 250));
 
-// Loading screen management
-window.addEventListener('load', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    
-    // Hide loading screen after a brief delay
-    setTimeout(() => {
-        loadingScreen.classList.add('hide');
-        document.body.classList.add('loaded');
-        
-        // Remove loading screen from DOM after transition
-        setTimeout(() => {
-            if (loadingScreen.parentNode) {
-                loadingScreen.remove();
-            }
-        }, 500);
-    }, 1500); // Show loading for 1.5 seconds
-});

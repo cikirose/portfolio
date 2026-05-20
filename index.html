@@ -3,280 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksandar Janković Portfolio</title>
-    <meta name="description" content="Portfolio Aleksandra Jankovića ">
-    <meta name="keywords" content="Aleksandar Janković, portfolio, Java developer, MySQL, Docker, POS support, računarska tehnika">
+    <title>Aleksandar Janković — Customer Service & Technology</title>
+    <meta name="description" content="Iskustvo u customer service i remote podršci, uz Java i rad sa podacima. Portfolio Aleksandra Jankovića.">
+    <meta name="keywords" content="Aleksandar Janković, customer service, remote support, Java, MySQL, portfolio">
     <meta name="author" content="Aleksandar Janković">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Aleksandar Janković Portfolio">
-    <meta property="og:description" content="Portfolio Aleksandra Jankovića">
+    <meta property="og:title" content="Aleksandar Janković — Customer Service & Technology">
+    <meta property="og:description" content="Professional with strong customer service background and growing tech skills in Java and databases.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aleksandar-jankovic.github.io">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui'>AJ</text></svg>">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <h3>Aleksandar Janković</h3>
-            <p data-translate="loading.text">Učitavanje portfolija...</p>
-        </div>
-    </div>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Aleksandar</h2>
-            </div>
+            <a href="#home" class="nav-logo"><span class="nav-logo-mark">AJ</span><span class="nav-logo-name">Aleksandar</span></a>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-translate="nav.home">Početna</a></li>
-                <li><a href="#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
-                <li><a href="#cv" class="nav-link" data-translate="nav.cv">CV</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav.about">O meni</a></li>
+                <li><a href="#work" class="nav-link" data-translate="nav.work">Projekti</a></li>
+                <li><a href="#experience" class="nav-link" data-translate="nav.experience">Iskustvo</a></li>
+                <li><a href="#skills" class="nav-link" data-translate="nav.skills">Veštine</a></li>
                 <li><a href="#contact" class="nav-link" data-translate="nav.contact">Kontakt</a></li>
             </ul>
-            <button class="language-toggle" id="languageToggle" aria-label="Promeni jezik">
-                <span id="languageText">ENG</span>
-            </button>
-            <button class="theme-toggle" id="themeToggle" aria-label="Promeni temu">
-                <i class="fas fa-moon" id="themeIcon"></i>
-            </button>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button class="language-toggle" id="languageToggle" aria-label="Promeni jezik"><span id="languageText">ENG</span></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Promeni temu"><i class="fas fa-moon" id="themeIcon"></i></button>
+                <button class="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title" data-translate="hero.title">Zdravo, ja sam <span class="highlight">Aleksandar Janković</span></h1>
-            <p class="hero-subtitle" data-translate="hero.subtitle"></p>
-            <div class="hero-intro-text">
-                <p data-translate="hero.intro1">Diplomirani inženjer Računarske tehnike. Trenutno sam zaposlen u kompaniji EB Infinity (Remote, USA), gde upravljam podacima za sopstveni portfolio od preko 70 kamiona, radeći sa digitalnim sistemima, strukturisanim podacima i bazama, uz fokus na tačnost evidencije, organizaciju procesa i unapređenje sistema.</p>
-                <p data-translate="hero.intro2">Posebno interesovanje usmeravam ka back-end razvoju i radu sa bazama podataka, sa ciljem daljeg profesionalnog usavršavanja u ovoj oblasti. U skorijoj budućnosti planiram da proširim znanje i na front-end tehnologije, kako bih izgradio kompletan full-stack profil.</p>
+    <header id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span data-translate="hero.badge">Zaposlen · Otvoren za customer service uloge</span>
+                </div>
+                <h1 class="hero-title" data-translate="hero.title">Zdravo, ja sam <span class="highlight">Aleksandar Janković</span></h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">Customer service &amp; operativna podrška · Java &amp; podaci · pouzdana komunikacija na engleskom</p>
+                <p class="hero-intro" data-translate="hero.intro">Diplomirani inženjer računarske tehnike sa višegodišnjim iskustvom u korisničkoj podršci, remote timovima i radu sa klijentima. Trenutno radim remote za kompaniju iz SAD-a; otvoren sam za sve vrste customer service poslova — uz paralelni razvoj u back-endu.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary" data-translate="hero.viewProfile">Moj profil</a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="hero.contact">Kontaktiraj me</a>
+                </div>
             </div>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary" data-translate="hero.viewWork">Vidi moj rad</a>
-                <a href="#contact" class="btn btn-secondary" data-translate="hero.contact">Kontaktiraj me</a>
+            <div class="hero-visual">
+                <div class="profile-frame">
+                    <img src="./assets/images/profile.png" alt="Aleksandar Janković" id="profileImg">
+                </div>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="profile-image">
-                <img src="./assets/images/profile.png" alt="Aleksandar Janković" id="profileImg">
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <p class="section-label" data-translate="about.label">Profil</p>
+            <h2 class="section-title section-title--left" data-translate="about.title">O meni</h2>
+            <div class="about-grid">
+                <div class="about-main">
+                    <p class="about-lead" data-translate="about.lead">Fokusiram se na customer service i tehničku podršku, često sa klijentima iz inostranstva na engleskom. Tražim remote, hibrid ili office ulogu gde mogu odmah da doprinesem timu.</p>
+                    <p data-translate="about.p1">Godinama radim u okruženjima gde su tačnost, brzina odgovora i jasna komunikacija ključni: od fleet operacija i koordinacije sa vozačima i servisima u SAD-u, preko Level 1 POS podrške za Sainsbury's, do današnjeg posla u EB Infinity gde vodim evidencije, obučavam kolege i rešavam operativne probleme pod pritiskom.</p>
+                    <p data-translate="about.p2">Klijenti i timovi na mene se oslanjaju zbog strpljenja, strukturisanog pristupa i naprednog engleskog. U isto vreme razvijam back-end veštine (Java, MySQL) kroz akademske i lične projekte — spreman sam da te oblasti gradim dalje, ali customer service ostaje moja snažna strana i svesno tražim te prilike.</p>
+                    <div class="about-tags">
+                        <span data-translate="about.tag1">Customer service</span>
+                        <span data-translate="about.tag2">Remote · EN</span>
+                        <span data-translate="about.tag3">Tehnička podrška</span>
+                        <span data-translate="about.tag4">Java · MySQL</span>
+                    </div>
+                </div>
+                <aside class="about-aside">
+                    <div class="info-card">
+                        <span class="info-card-label" data-translate="about.card.status">Status</span>
+                        <p class="info-card-value" data-translate="about.card.statusValue">Zaposlen · Remote (USA)</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-card-label" data-translate="about.card.focus">Fokus</span>
+                        <p class="info-card-value" data-translate="about.card.focusValue">CS, podrška, operacije</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-card-label" data-translate="about.card.education">Obrazovanje</span>
+                        <p class="info-card-value" data-translate="about.card.educationValue">Dipl. inž. računarske tehnike</p>
+                    </div>
+                    <p class="about-note" data-translate="about.video">Povremeno radim i video montažu (Premiere Pro, CapCut) — po potrebi mogu poslati reference.</p>
+                </aside>
             </div>
         </div>
     </section>
 
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="work" class="portfolio">
         <div class="container">
-            <h2 class="section-title" data-translate="portfolio.title">Portfolio projekti</h2>
+            <p class="section-label" data-translate="work.label">Razvoj</p>
+            <h2 class="section-title section-title--left" data-translate="work.title">Projekti</h2>
+            <p class="section-subtitle section-subtitle--left" data-translate="work.subtitle">Java i Python projekti — dokaz tehničkog rasta pored operativnog iskustva.</p>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-users"></i>
+                <article class="portfolio-item">
+                    <div class="portfolio-icon"><i class="fas fa-users"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.teamble.role">Timski projekat · Project management</p>
+                        <h3 data-translate="portfolio.teamble.title">Teamble</h3>
+                        <p data-translate="portfolio.teamble.description">Organizacija projekata, zadataka i timske saradnje — CRUD, uloge i praćenje statusa.</p>
+                        <div class="portfolio-tags"><span>Java</span><span>MySQL</span><span>Git</span></div>
+                        <a href="https://github.com/cikirose/projectmanagerapp.git" class="text-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span data-translate="portfolio.viewGithub">GitHub</span></a>
                     </div>
-                    <div class="portfolio-content">
-                        <h3 data-translate="portfolio.teamble.title">Teamble - Project Manager Aplikacija</h3>
-                        <p data-translate="portfolio.teamble.description">Aplikacija dizajnirana za efikasnu organizaciju i praćenje projekata, zadataka i timske saradnje</p>
-                        <div class="portfolio-tags">
-                            <span>Java</span>
-                            <span>MySQL</span>
-                            <span>Git</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="https://github.com/cikirose/projectmanagerapp.git" class="portfolio-link" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
+                </article>
+                <article class="portfolio-item">
+                    <div class="portfolio-icon"><i class="fas fa-home"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.teambuildstay.role">Diplomski rad · Rezervacije</p>
+                        <h3 data-translate="portfolio.teambuildstay.title">TeamBuildStay</h3>
+                        <p data-translate="portfolio.teambuildstay.description">Pretraga i rezervacija smeštaja — filtriranje, dostupnost i upravljanje rezervacijama.</p>
+                        <div class="portfolio-tags"><span>Java</span><span>MySQL</span><span>XAMPP</span></div>
+                        <a href="https://github.com/cikirose/teambuildstay" class="text-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span data-translate="portfolio.viewGithub">GitHub</span></a>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-home"></i>
+                </article>
+                <article class="portfolio-item">
+                    <div class="portfolio-icon"><i class="fas fa-music"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.spotify.role">Lični projekat · Python</p>
+                        <h3 data-translate="portfolio.spotify.title">Spotify podsetnik</h3>
+                        <p data-translate="portfolio.spotify.description">Mala Python skripta koja prati ko je na redu da plati zajedničku pretplatu — jednostavno, ali korisno u praksi.</p>
+                        <div class="portfolio-tags"><span>Python</span></div>
+                        <a href="https://github.com/cikirose/spotifypodstenik" class="text-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span data-translate="portfolio.viewGithub">GitHub</span></a>
                     </div>
-                    <div class="portfolio-content">
-                        <h3 data-translate="portfolio.teambuildstay.title">TeamBuildStay - Rezervacije kuća</h3>
-                        <p data-translate="portfolio.teambuildstay.description">Aplikacija koja omogućava jednostavno pretraživanje i rezervaciju privatnih kuća, posebno namenjenih za organizaciju team building događaja</p>
-                        <div class="portfolio-tags">
-                            <span>Java</span>
-                            <span>MySQL</span>
-                            <span>XAMPP</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="https://github.com/cikirose/diplomski.git" class="portfolio-link" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
+                </article>
+                <article class="portfolio-item portfolio-item--more">
+                    <div class="portfolio-body portfolio-body--more">
+                        <p data-translate="work.moreText">Još mnogo drugih projekata na Gitu — Python, Java i alati koje sam pravio uz učenje.</p>
+                        <a href="https://github.com/cikirose" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> <span data-translate="work.moreButton">Pogledaj GitHub</span>
+                        </a>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-translate="portfolio.video.title">Video Montaža Projekti</h3>
-                        <p data-translate="portfolio.video.description">Profesionalni video montaža projekti koristeći Adobe Premiere Pro i CapCut</p>
-                        <div class="portfolio-tags">
-                            <span>Adobe Premiere Pro</span>
-                            <span>CapCut</span>
-                            <span>Video Editing</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- CV Section -->
-    <section id="cv" class="cv">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title" data-translate="cv.title">CV & Obrazovanje</h2>
-            <div class="cv-content">
-                <div class="cv-section">
-                    <h3><i class="fas fa-graduation-cap"></i> <span data-translate="cv.education.title">Obrazovanje</span></h3>
-                    <div class="cv-item">
-                        <div class="cv-date" data-translate="cv.education.college.date">2020 - 2025</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.education.college.school">Visoka škola elektrotehnike i računarstva</h4>
-                            <p data-translate="cv.education.college.field">Smer: Računarska tehnika</p>
-                            <p data-translate="cv.education.college.location">Mesto: Beograd</p>
-                        </div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-date" data-translate="cv.education.highschool.date">2016 - 2020</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.education.highschool.school">Ekonomska škola Užice</h4>
-                            <p data-translate="cv.education.highschool.field">Smer: Finansijski administrator</p>
-                            <p data-translate="cv.education.highschool.location">Mesto: Užice</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="cv-section">
-                    <h3><i class="fas fa-briefcase"></i> <span data-translate="cv.experience.title">Radno iskustvo</span></h3>
-                    <div class="cv-item">
-                        <div class="cv-date" data-translate="cv.experience.current.date">Oktobar 2025 - Trenutno</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.experience.current.position">EB Infinity - Fleet Maintenance Representative</h4>
-                            <p data-translate="cv.experience.current.company">Remote, USA</p>
-                            <ul>
-                                <li data-translate="cv.experience.current.task1">Rad sa strukturisanim podacima i bazama evidencija (servisi, kvarovi, troškovi), uključujući unos, ažuriranje i analizu podataka</li>
-                                <li data-translate="cv.experience.current.task2">Obuka novih zaposlenih za rad u sistemima, razumevanje procesa i poštovanje kompanijskih pravila</li>
-                                <li data-translate="cv.experience.current.task3">Analiza operativnih i servisnih podataka radi optimizacije procesa i smanjenja downtime-a flote</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-date" data-translate="cv.experience.previous.date">April 2025 - Oktobar 2025</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.experience.previous.position">Level 1 Support Point of Sale - Sainsbury's</h4>
-                            <p data-translate="cv.experience.previous.company">NCR Voyix - Beograd</p>
-                            <ul>
-                                <li data-translate="cv.experience.previous.task1">Snažna tehnička osnova: Veštine u dijagnostici, održavanju i optimizaciji POS i samouslužnih kasa</li>
-                                <li data-translate="cv.experience.previous.task2">Analitičko razmišljanje i rešavanje problema pod pritiskom vremena</li>
-                                <li data-translate="cv.experience.previous.task3">Rad sa IT infrastrukturom i korporativnim softverskim alatima</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-date" data-translate="cv.experience.previous2.date">Januar 2024 - April 2025</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.experience.previous2.position">Fleet Maintenance Support</h4>
-                            <p data-translate="cv.experience.previous2.company">SMJ-Freight - Remote</p>
-                            <ul>
-                                <li data-translate="cv.experience.previous2.task1">Održavanje i kontrola redovnih inspekcija i popravki vozila</li>
-                                <li data-translate="cv.experience.previous2.task2">Efikasna komunikacija sa vozačima, mehaničarima i menadžerima</li>
-                                <li data-translate="cv.experience.previous2.task3">Profesionalna komunikacija sa servisima širom SAD-a</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <p class="section-label" data-translate="services.label">Usluge</p>
+            <h2 class="section-title section-title--left" data-translate="services.title">Šta nudim</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h3 data-translate="services.cs.title">Customer service</h3>
+                    <p data-translate="services.cs.description">Podrška korisnicima, rešavanje pritužbi, praćenje zahteva i profesionalna komunikacija — remote ili na licu mesta.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                    <h3 data-translate="services.support.title">Tehnička podrška</h3>
+                    <p data-translate="services.support.description">POS sistemi, incidenti pod pritiskom, dijagnostika i rad sa korporativnim alatima.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3 data-translate="services.data.title">Podaci i operacije</h3>
+                    <p data-translate="services.data.description">Evidencije, tačan unos podataka, analiza i optimizacija procesa u digitalnim sistemima.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-translate="services.dev.title">Back-end razvoj</h3>
+                    <p data-translate="services.dev.description">Java aplikacije i MySQL — za timove koji traže junior profil sa realnim projektima.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-                <div class="cv-section">
-                    <h3><i class="fas fa-certificate"></i> <span data-translate="cv.skills.title">Dodatne veštine</span></h3>
-                    <div class="cv-item">
-                        <div class="cv-date">-</div>
-                        <div class="cv-details">
-                            <h4 data-translate="cv.skills.languages.title">Jezici i softver</h4>
-                            <ul>
-                                <li data-translate="cv.skills.languages.english"><strong>Engleski:</strong> Napredni nivo</li>
-                                <li data-translate="cv.skills.languages.office"><strong>MS Office:</strong> Word, Excel, PowerPoint</li>
-                                <li data-translate="cv.skills.languages.video"><strong>Video montaža:</strong> Adobe Premiere Pro, CapCut</li>
-                                <li data-translate="cv.skills.languages.programming"><strong>Programiranje/Alati:</strong> Java, Python, MySQL, Docker, Git, EmailJS</li>
-                                <li data-translate="cv.skills.languages.vestine"><strong>Veštine:</strong> MultiTasking, Odgovornost, Komunikacija, Analitičke veštine</li>
-                            </ul>
-                        </div>
+    <section id="experience" class="experience">
+        <div class="container">
+            <p class="section-label" data-translate="experience.label">Karijera</p>
+            <h2 class="section-title section-title--left" data-translate="experience.title">Iskustvo</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time data-translate="cv.experience.current.date">Oktobar 2025 — Trenutno</time>
+                        <h3 data-translate="cv.experience.current.position">EB Infinity — Fleet Maintenance Representative</h3>
+                        <p class="timeline-place" data-translate="cv.experience.current.company">Remote, USA</p>
+                        <ul>
+                            <li data-translate="cv.experience.current.task1">Korisnička i operativna podrška: strukturisani podaci, evidencije, komunikacija sa timom</li>
+                            <li data-translate="cv.experience.current.task2">Obuka novih zaposlenih i konzistentnost u radu sa sistemima</li>
+                            <li data-translate="cv.experience.current.task3">Analiza podataka radi smanjenja zastoja i boljih procesa</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time data-translate="cv.experience.previous.date">April — Oktobar 2025</time>
+                        <h3 data-translate="cv.experience.previous.position">Level 1 POS Support — Sainsbury's</h3>
+                        <p class="timeline-place" data-translate="cv.experience.previous.company">NCR Voyix · Beograd</p>
+                        <ul>
+                            <li data-translate="cv.experience.previous.task1">Front-line tehnička podrška za POS i samouslužne kase</li>
+                            <li data-translate="cv.experience.previous.task2">Rešavanje problema pod vremenskim pritiskom</li>
+                            <li data-translate="cv.experience.previous.task3">Rad sa IT infrastrukturom i korporativnim alatima</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time data-translate="cv.experience.previous2.date">Januar 2024 — April 2025</time>
+                        <h3 data-translate="cv.experience.previous2.position">Fleet Maintenance Support</h3>
+                        <p class="timeline-place" data-translate="cv.experience.previous2.company">SMJ-Freight · Remote</p>
+                        <ul>
+                            <li data-translate="cv.experience.previous2.task1">Koordinacija sa vozačima, servisima i menadžmentom (EN)</li>
+                            <li data-translate="cv.experience.previous2.task2">Evidencija inspekcija, popravki i operativnih podataka</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item timeline-item--edu">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time data-translate="cv.education.college.date">2020 — 2025</time>
+                        <h3 data-translate="cv.education.college.school">Visoka škola elektrotehnike i računarstva</h3>
+                        <p class="timeline-place" data-translate="cv.education.college.field">Dipl. inž. računarske tehnike · Beograd</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <p class="section-label" data-translate="skills.label">Kompetencije</p>
+            <h2 class="section-title section-title--left" data-translate="skills.title">Veštine</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 data-translate="skills.cs.label">Customer service</h3>
+                    <div class="skill-tags">
+                        <span data-translate="skills.cs.1">Korisnička podrška</span>
+                        <span data-translate="skills.cs.2">Reklamacije</span>
+                        <span data-translate="skills.cs.3">Remote komunikacija</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 data-translate="skills.tech.label">Tehnologija</h3>
+                    <div class="skill-tags"><span>Java</span><span>MySQL</span><span>Python</span><span>Git</span><span>Docker</span></div>
+                </div>
+                <div class="skill-group">
+                    <h3 data-translate="skills.soft.label">Lične veštine</h3>
+                    <div class="skill-tags">
+                        <span data-translate="skills.soft.english">Engleski (napredno)</span>
+                        <span data-translate="skills.soft.patience">Strpljenje</span>
+                        <span data-translate="skills.soft.analytical">Analitika</span>
+                        <span data-translate="skills.soft.multitask">Multitasking</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-translate="contact.title">Kontaktiraj me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 data-translate="contact.info.title">Informacije</h3>
-                    <div class="contact-item">
+            <p class="section-label" data-translate="contact.label">Kontakt</p>
+            <p class="section-subtitle section-subtitle--left contact-intro" data-translate="contact.subtitle">Za customer service, podršku ili saradnju.</p>
+            <div class="contact-layout">
+                <div class="contact-details">
+                    <a href="mailto:aleksandarjankovic159@gmail.com" class="contact-row">
                         <i class="fas fa-envelope"></i>
                         <span>aleksandarjankovic159@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
+                    </a>
+                    <a href="tel:+381603118999" class="contact-row">
                         <i class="fas fa-phone"></i>
-                        <span>+381603118999</span>
-                    </div>
-                    <div class="contact-item">
+                        <span>+381 60 311 8999</span>
+                    </a>
+                    <div class="contact-row">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span data-translate="contact.info.location">Belgrade</span>
+                        <span data-translate="contact.info.location">Beograd, Srbija</span>
                     </div>
-                    <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/aleksandar-jankovic-469829352/" class="contact-row" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/aleksandar-jankovic-469829352/" target="_blank" data-translate="contact.info.linkedin">LinkedIn Profile</a>
-                    </div>
-                    <div class="contact-item">
+                        <span data-translate="contact.info.linkedin">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/cikirose" class="contact-row" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github"></i>
-                        <a href="https://github.com/cikirose" target="_blank" data-translate="contact.info.github">GitHub Profile</a>
-                    </div>
+                        <span data-translate="contact.info.github">GitHub</span>
+                    </a>
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" data-translate-placeholder="contact.form.name" placeholder="Vaše ime" required>
+                        <label for="name" data-translate="contact.form.name">Ime</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" data-translate-placeholder="contact.form.email" placeholder="Vaš email" required>
+                        <label for="email" data-translate="contact.form.email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" data-translate-placeholder="contact.form.subject" placeholder="Naslov" required>
+                        <label for="subject" data-translate="contact.form.subject">Naslov</label>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" data-translate-placeholder="contact.form.message" placeholder="Vaša poruka" rows="5" required></textarea>
+                        <label for="message" data-translate="contact.form.message">Poruka</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" data-translate="contact.form.submit">Pošalji poruku</button>
+                    <button type="submit" class="btn btn-primary btn-full" data-translate="contact.form.submit">Pošalji poruku</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p data-translate="footer.copyright">&copy; 2025 Aleksandar Janković Portfolio. Sva prava zadržana.</p>
+        <div class="container footer-inner">
+            <p data-translate="footer.copyright">&copy; 2026 Aleksandar Janković</p>
+            <a href="#home" class="footer-top" data-translate="footer.top">Na vrh</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=6"></script>
 </body>
 </html>
