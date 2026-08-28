@@ -19,12 +19,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="intro-overlay" id="introOverlay">
+        <button class="intro-skip" id="introSkip" data-translate="intro.skip">Preskoči</button>
+        <div class="intro-phone" id="introPhone" role="button" tabindex="0" aria-label="Otvori portfolio">
+            <div class="intro-phone-notch"></div>
+            <div class="intro-phone-screen">
+                <div class="intro-statusbar">
+                    <span id="introTime">9:41</span>
+                    <span class="intro-statusicons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-three-quarters"></i></span>
+                </div>
+                <div class="intro-clock">
+                    <span class="intro-clock-time" id="introClockTime">9:41</span>
+                    <span class="intro-clock-date" id="introClockDate">—</span>
+                </div>
+                <div class="intro-notification intro-notification--1">
+                    <div class="intro-notification-icon"><i class="fas fa-truck-fast"></i></div>
+                    <div class="intro-notification-body">
+                        <div class="intro-notification-top">
+                            <span class="intro-notification-sender" data-translate="intro.sender">Fleet Dispatch</span>
+                            <span class="intro-notification-time" data-translate="intro.now">sad</span>
+                        </div>
+                        <p data-translate="intro.message">Kamion 214 čeka na terenu, treba nam pomoć — hitno.</p>
+                    </div>
+                </div>
+                <div class="intro-notification intro-notification--2 intro-notification--reply">
+                    <div class="intro-notification-icon intro-notification-icon--reply"><i class="fas fa-check"></i></div>
+                    <div class="intro-notification-body">
+                        <div class="intro-notification-top">
+                            <span class="intro-notification-sender">Aleksandar</span>
+                            <span class="intro-notification-time" data-translate="intro.now">sad</span>
+                        </div>
+                        <p data-translate="intro.reply">Tu sam. Rešavamo odmah.</p>
+                    </div>
+                </div>
+                <div class="intro-lockline">
+                    <i class="fas fa-lock"></i>
+                    <span data-translate="intro.tap">Dodirni da otvoriš portfolio</span>
+                </div>
+                <div class="intro-phone-home"></div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo"><span class="nav-logo-mark">AJ</span><span class="nav-logo-name">Aleksandar</span></a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link" data-translate="nav.about">O meni</a></li>
                 <li><a href="#experience" class="nav-link" data-translate="nav.experience">Iskustvo</a></li>
+                <li><a href="#work" class="nav-link" data-translate="nav.work">Projekti</a></li>
                 <li><a href="#skills" class="nav-link" data-translate="nav.skills">Veštine</a></li>
                 <li><a href="#contact" class="nav-link" data-translate="nav.contact">Kontakt</a></li>
             </ul>
@@ -179,6 +222,36 @@
         </div>
     </section>
 
+    <section id="work" class="work">
+        <div class="container">
+            <p class="section-label" data-translate="work.label">Razvoj</p>
+            <h2 class="section-title section-title--left" data-translate="work.title">Projekti</h2>
+            <p class="section-subtitle section-subtitle--left" data-translate="work.subtitle">Uz fleet i customer service, ovde i dalje gradim softver — dva primera.</p>
+            <div class="portfolio-grid">
+                <article class="portfolio-item">
+                    <div class="portfolio-icon"><i class="fas fa-house-chimney-user"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.teambuildstay.role">Diplomski rad · Rezervacije</p>
+                        <h3 data-translate="portfolio.teambuildstay.title">TeamBuildStay</h3>
+                        <p data-translate="portfolio.teambuildstay.description">Desktop aplikacija za pretragu i rezervaciju smeštaja za team building događaje — JavaFX, MySQL baza, DBeaver za rad sa podacima.</p>
+                        <div class="portfolio-tags"><span>Java</span><span>JavaFX</span><span>MySQL</span><span>DBeaver</span></div>
+                        <a href="https://github.com/cikirose/teambuildstay" class="text-link" target="_blank" rel="noopener noreferrer" data-translate="portfolio.viewGithub">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+                <article class="portfolio-item">
+                    <div class="portfolio-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.thissite.role">Lični projekat</p>
+                        <h3 data-translate="portfolio.thissite.title">Portfolio koji upravo gledaš</h3>
+                        <p data-translate="portfolio.thissite.description">Vanilla HTML, CSS i JavaScript, bez frameworka — dark/light tema, dvojezični sadržaj i intro ekran koji si upravo prošao/la.</p>
+                        <div class="portfolio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a href="https://github.com/cikirose/portfolio" class="text-link" target="_blank" rel="noopener noreferrer" data-translate="portfolio.viewGithub">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="skills">
         <div class="container">
             <p class="section-label" data-translate="skills.label">Kompetencije</p>
@@ -200,6 +273,15 @@
                         <span data-translate="skills.ops.2">Remote podrška (EN)</span>
                         <span data-translate="skills.ops.3">Obuka tima</span>
                         <span data-translate="skills.ops.4">Customer service</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 data-translate="skills.tech.label">Tech</h3>
+                    <div class="skill-tags">
+                        <span data-translate="skills.tech.1">Java</span>
+                        <span data-translate="skills.tech.2">JavaFX</span>
+                        <span data-translate="skills.tech.3">MySQL</span>
+                        <span data-translate="skills.tech.4">DBeaver</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -272,6 +354,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 </html>

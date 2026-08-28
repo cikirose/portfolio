@@ -7,6 +7,13 @@ const translations = {
         'nav.skills': 'Veštine',
         'nav.contact': 'Kontakt',
 
+        'intro.skip': 'Preskoči',
+        'intro.sender': 'Fleet Dispatch',
+        'intro.now': 'sad',
+        'intro.message': 'Kamion 214 čeka na terenu, treba nam pomoć — hitno.',
+        'intro.reply': 'Tu sam. Rešavamo odmah.',
+        'intro.tap': 'Dodirni da otvoriš portfolio',
+
         'hero.badge': 'Zaposlen · Otvoren za customer service uloge',
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
         'hero.subtitle': 'Customer service & operativna podrška · Java & podaci · pouzdana komunikacija na engleskom',
@@ -33,19 +40,14 @@ const translations = {
 
         'work.label': 'Razvoj',
         'work.title': 'Projekti',
-        'work.subtitle': 'Java i Python projekti — dokaz tehničkog rasta pored operativnog iskustva.',
-        'portfolio.teamble.role': 'Timski projekat · Project management',
-        'portfolio.teamble.title': 'Teamble',
-        'portfolio.teamble.description': 'Organizacija projekata, zadataka i timske saradnje — CRUD, uloge i praćenje statusa.',
+        'work.subtitle': 'Uz fleet i customer service, ovde i dalje gradim softver — dva primera.',
         'portfolio.teambuildstay.role': 'Diplomski rad · Rezervacije',
         'portfolio.teambuildstay.title': 'TeamBuildStay',
-        'portfolio.teambuildstay.description': 'Pretraga i rezervacija smeštaja — filtriranje, dostupnost i upravljanje rezervacijama.',
+        'portfolio.teambuildstay.description': 'Desktop aplikacija za pretragu i rezervaciju smeštaja za team building događaje — JavaFX, MySQL baza, DBeaver za rad sa podacima.',
+        'portfolio.thissite.role': 'Lični projekat',
+        'portfolio.thissite.title': 'Portfolio koji upravo gledaš',
+        'portfolio.thissite.description': 'Vanilla HTML, CSS i JavaScript, bez frameworka — dark/light tema, dvojezični sadržaj i intro ekran koji si upravo prošao/la.',
         'portfolio.viewGithub': 'GitHub',
-        'portfolio.spotify.role': 'Automatizacija · Python',
-        'portfolio.spotify.title': 'Spotify podsetnik',
-        'portfolio.spotify.description': 'Python alat za rotaciju plaćanja family Spotify plana — prati redosled, javlja ko je na redu i šalje podsetnik pre isteka pretplate.',
-        'work.moreText': 'Još mnogo drugih projekata na Gitu — Python, Java i alati koje sam pravio uz učenje.',
-        'work.moreButton': 'Pogledaj GitHub',
 
         'services.label': 'Usluge',
         'services.title': 'Šta nudim',
@@ -87,7 +89,11 @@ const translations = {
         'skills.cs.1': 'Korisnička podrška',
         'skills.cs.2': 'Reklamacije',
         'skills.cs.3': 'Remote komunikacija',
-        'skills.tech.label': 'Tehnologija',
+        'skills.tech.label': 'Tech',
+        'skills.tech.1': 'Java',
+        'skills.tech.2': 'JavaFX',
+        'skills.tech.3': 'MySQL',
+        'skills.tech.4': 'DBeaver',
         'skills.soft.label': 'Lične veštine',
         'skills.soft.english': 'Engleski (napredno)',
         'skills.soft.patience': 'Strpljenje',
@@ -122,6 +128,13 @@ const translations = {
         'nav.skills': 'Skills',
         'nav.contact': 'Contact',
 
+        'intro.skip': 'Skip',
+        'intro.sender': 'Fleet Dispatch',
+        'intro.now': 'now',
+        'intro.message': 'Truck 214 is stuck in the field, needs help — urgent.',
+        'intro.reply': "I'm here. Handling it now.",
+        'intro.tap': 'Tap to open the portfolio',
+
         'hero.badge': 'Employed · Open to customer service roles',
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
         'hero.subtitle': 'Customer service & operations support · Java & data · reliable communication in English',
@@ -148,19 +161,14 @@ const translations = {
 
         'work.label': 'Development',
         'work.title': 'Projects',
-        'work.subtitle': 'Java and Python projects — proof of technical growth alongside operational experience.',
-        'portfolio.teamble.role': 'Team project · Project management',
-        'portfolio.teamble.title': 'Teamble',
-        'portfolio.teamble.description': 'Project, task, and team collaboration — CRUD, roles, and status tracking.',
+        'work.subtitle': 'Alongside fleet and customer service, I still build software — two examples.',
         'portfolio.teambuildstay.role': 'Thesis · Bookings',
         'portfolio.teambuildstay.title': 'TeamBuildStay',
-        'portfolio.teambuildstay.description': 'Search and book stays — filtering, availability, and reservation management.',
+        'portfolio.teambuildstay.description': 'Desktop app for finding and booking team-building accommodation — JavaFX, a MySQL database, and DBeaver for data management.',
+        'portfolio.thissite.role': 'Personal project',
+        'portfolio.thissite.title': 'The portfolio you\'re looking at',
+        'portfolio.thissite.description': 'Vanilla HTML, CSS, and JavaScript, no framework — dark/light theme, bilingual content, and the intro screen you just came through.',
         'portfolio.viewGithub': 'GitHub',
-        'portfolio.spotify.role': 'Automation · Python',
-        'portfolio.spotify.title': 'Spotify reminder',
-        'portfolio.spotify.description': 'Python tool for rotating payments on a shared family Spotify plan — tracks the queue, flags who\'s next, and sends reminders before renewal.',
-        'work.moreText': 'Many more projects on GitHub — Python, Java, and tools I built while learning.',
-        'work.moreButton': 'View GitHub',
 
         'services.label': 'Services',
         'services.title': 'What I offer',
@@ -202,7 +210,11 @@ const translations = {
         'skills.cs.1': 'User support',
         'skills.cs.2': 'Complaints',
         'skills.cs.3': 'Remote communication',
-        'skills.tech.label': 'Technology',
+        'skills.tech.label': 'Tech',
+        'skills.tech.1': 'Java',
+        'skills.tech.2': 'JavaFX',
+        'skills.tech.3': 'MySQL',
+        'skills.tech.4': 'DBeaver',
         'skills.soft.label': 'Soft skills',
         'skills.soft.english': 'English (advanced)',
         'skills.soft.patience': 'Patience',
@@ -235,12 +247,81 @@ const translations = {
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
+    initIntroOverlay();
     initLanguageToggle();
     initThemeToggle();
     initNavigation();
     initContactForm();
     initScrollEffects();
 });
+
+// Phone lock-screen intro overlay
+function initIntroOverlay() {
+    const overlay = document.getElementById('introOverlay');
+    if (!overlay) return;
+
+    // Already seen this session — leave it hidden (default CSS: display none)
+    if (sessionStorage.getItem('introSeen') === '1') {
+        overlay.remove();
+        return;
+    }
+
+    const phone = document.getElementById('introPhone');
+    const skipBtn = document.getElementById('introSkip');
+    const timeEl = document.getElementById('introTime');
+    const clockTimeEl = document.getElementById('introClockTime');
+    const clockDateEl = document.getElementById('introClockDate');
+
+    function updateClock() {
+        const now = new Date();
+        const hh = String(now.getHours()).padStart(2, '0');
+        const mm = String(now.getMinutes()).padStart(2, '0');
+        const timeStr = `${hh}:${mm}`;
+        if (timeEl) timeEl.textContent = timeStr;
+        if (clockTimeEl) clockTimeEl.textContent = timeStr;
+        if (clockDateEl) {
+            const lang = document.documentElement.getAttribute('lang') || 'sr';
+            const locale = lang === 'en' ? 'en-US' : 'sr-Latn-RS';
+            clockDateEl.textContent = now.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long' });
+        }
+    }
+    updateClock();
+    const clockInterval = setInterval(updateClock, 1000 * 30);
+
+    document.documentElement.classList.add('intro-lock');
+    overlay.classList.add('is-active');
+
+    function closeOverlay() {
+        clearInterval(clockInterval);
+        overlay.classList.add('is-exiting');
+        sessionStorage.setItem('introSeen', '1');
+        document.documentElement.classList.remove('intro-lock');
+        setTimeout(() => {
+            overlay.remove();
+        }, 500);
+    }
+
+    if (phone) {
+        phone.addEventListener('click', closeOverlay);
+        phone.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                closeOverlay();
+            }
+        });
+    }
+
+    if (skipBtn) {
+        skipBtn.addEventListener('click', closeOverlay);
+    }
+
+    document.addEventListener('keydown', function escHandler(e) {
+        if (e.key === 'Escape') {
+            closeOverlay();
+            document.removeEventListener('keydown', escHandler);
+        }
+    });
+}
 
 // Language Toggle functionality
 function initLanguageToggle() {
