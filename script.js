@@ -13,6 +13,9 @@ const translations = {
         'intro.message': 'Kamion 214 čeka na terenu, treba nam pomoć — hitno.',
         'intro.reply': 'Tu sam. Rešavamo odmah.',
         'intro.tap': 'Dodirni da otvoriš portfolio',
+        'intro.choice.heading': 'Šta te zanima?',
+        'intro.choice.trucking': 'Trucking / Customer Service',
+        'intro.choice.tech': 'IT / Programiranje',
 
         'hero.badge': 'Zaposlen · Otvoren za customer service uloge',
         'hero.title': 'Zdravo, ja sam <span class="highlight">Aleksandar Janković</span>',
@@ -134,6 +137,9 @@ const translations = {
         'intro.message': 'Truck 214 is stuck in the field, needs help — urgent.',
         'intro.reply': "I'm here. Handling it now.",
         'intro.tap': 'Tap to open the portfolio',
+        'intro.choice.heading': 'What are you here for?',
+        'intro.choice.trucking': 'Trucking / Customer Service',
+        'intro.choice.tech': 'IT / Programming',
 
         'hero.badge': 'Employed · Open to customer service roles',
         'hero.title': 'Hello, I am <span class="highlight">Aleksandar Janković</span>',
@@ -291,28 +297,54 @@ function initIntroOverlay() {
     document.documentElement.classList.add('intro-lock');
     overlay.classList.add('is-active');
 
-    function closeOverlay() {
+    function closeOverlay(target) {
         clearInterval(clockInterval);
         overlay.classList.add('is-exiting');
         sessionStorage.setItem('introSeen', '1');
         document.documentElement.classList.remove('intro-lock');
         setTimeout(() => {
             overlay.remove();
+            if (target) {
+                const el = document.querySelector(target);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('section-highlight');
+                    setTimeout(() => el.classList.remove('section-highlight'), 1800);
+                }
+            }
         }, 500);
     }
 
-    if (phone) {
-        phone.addEventListener('click', closeOverlay);
-        phone.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                closeOverlay();
-            }
-        });
+    function revealChoices() {
+        if (phone) {
+            phone.classList.add('is-unlocked');
+            phone.removeEventListener('click', handlePhoneActivate);
+            phone.removeEventListener('keydown', handlePhoneActivate);
+            phone.setAttribute('tabindex', '-1');
+        }
+        const firstChoice = overlay.querySelector('.intro-choice-btn');
+        if (firstChoice) firstChoice.focus();
     }
 
+    function handlePhoneActivate(e) {
+        if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
+        if (e.type === 'keydown') e.preventDefault();
+        revealChoices();
+    }
+
+    if (phone) {
+        phone.addEventListener('click', handlePhoneActivate);
+        phone.addEventListener('keydown', handlePhoneActivate);
+    }
+
+    overlay.querySelectorAll('.intro-choice-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            closeOverlay(btn.getAttribute('data-target'));
+        });
+    });
+
     if (skipBtn) {
-        skipBtn.addEventListener('click', closeOverlay);
+        skipBtn.addEventListener('click', function() { closeOverlay(); });
     }
 
     document.addEventListener('keydown', function escHandler(e) {
