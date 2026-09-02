@@ -2,6 +2,7 @@
 :root {
     --font-sans: 'Inter', system-ui, sans-serif;
     --font-display: 'DM Sans', 'Inter', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
     --accent: #0f766e;
     --accent-hover: #0d9488;
     --accent-soft: rgba(15, 118, 110, 0.1);
@@ -53,7 +54,11 @@ body {
     font-size: 1rem;
     line-height: 1.65;
     color: var(--text);
-    background: var(--bg);
+    background:
+        repeating-linear-gradient(0deg, color-mix(in srgb, var(--border) 45%, transparent) 0px, transparent 1px, transparent 32px, color-mix(in srgb, var(--border) 45%, transparent) 33px),
+        repeating-linear-gradient(90deg, color-mix(in srgb, var(--border) 45%, transparent) 0px, transparent 1px, transparent 32px, color-mix(in srgb, var(--border) 45%, transparent) 33px),
+        var(--bg);
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -226,10 +231,14 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-muted);
     margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem 0.35rem 0.65rem;
 }
 
 .status-dot {
@@ -336,6 +345,15 @@ body {
     position: relative;
 }
 
+.profile-frame::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px dashed var(--accent-ring);
+    border-radius: calc(var(--radius-lg) - 8px);
+    pointer-events: none;
+}
+
 .profile-frame::before {
     content: '';
     position: absolute;
@@ -357,18 +375,65 @@ body {
     object-position: center top;
 }
 
+/* ── Blueprint corner brackets ── */
+.blueprint-corners {
+    position: relative;
+}
+
+.blueprint-corners::before,
+.blueprint-corners::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.blueprint-corners::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+}
+
+.blueprint-corners::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+}
+
 /* ── Sections ── */
 section {
     padding: var(--section-pad) 0;
 }
 
 .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--accent);
     margin-bottom: 0.5rem;
+}
+
+.section-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    text-transform: none;
 }
 
 .section-title {
@@ -479,7 +544,7 @@ section {
 /* ── Portfolio ── */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
 }
 
@@ -541,11 +606,12 @@ section {
 }
 
 .portfolio-tags span {
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
     padding: 0.2rem 0.55rem;
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 4px;
     color: var(--text-muted);
 }
 
@@ -561,6 +627,14 @@ section {
 
 .text-link:hover {
     text-decoration: underline;
+}
+
+.portfolio-meta-note {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
 }
 
 .portfolio-item--more {
@@ -738,12 +812,13 @@ section {
 }
 
 .skill-tags span {
-    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
     font-weight: 500;
     padding: 0.35rem 0.7rem;
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 5px;
     color: var(--text-muted);
 }
 
@@ -854,6 +929,13 @@ section {
 
 .footer-top:hover {
     text-decoration: underline;
+}
+
+.footer-build {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.6;
 }
 
 /* ── Responsive ── */
@@ -1277,6 +1359,11 @@ html.intro-lock body {
 }
 
 @media (max-width: 480px) {
+    .footer-build {
+        display: none;
+    }
+
+
     .intro-clock-time {
         font-size: 2.8rem;
     }

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="profile-frame">
+                <div class="profile-frame blueprint-corners">
                     <img src="./assets/images/profile.png" alt="Aleksandar Janković" id="profileImg">
                 </div>
             </div>
@@ -116,7 +116,7 @@
 
     <section id="about" class="about">
         <div class="container">
-            <p class="section-label" data-translate="about.label">Profil</p>
+            <p class="section-label"><span class="section-index">01</span><span data-translate="about.label">Profil</span></p>
             <h2 class="section-title section-title--left" data-translate="about.title">O meni</h2>
             <div class="about-grid">
                 <div class="about-main">
@@ -151,7 +151,7 @@
 
     <section id="services" class="services">
         <div class="container">
-            <p class="section-label" data-translate="services.label">Usluge</p>
+            <p class="section-label"><span class="section-index">02</span><span data-translate="services.label">Usluge</span></p>
             <h2 class="section-title section-title--left" data-translate="services.title">Šta nudim</h2>
             <div class="services-grid">
                 <article class="service-card">
@@ -180,7 +180,7 @@
 
     <section id="experience" class="experience">
         <div class="container">
-            <p class="section-label" data-translate="experience.label">Karijera</p>
+            <p class="section-label"><span class="section-index">03</span><span data-translate="experience.label">Karijera</span></p>
             <h2 class="section-title section-title--left" data-translate="experience.title">Iskustvo</h2>
             <div class="timeline">
                 <article class="timeline-item">
@@ -235,11 +235,11 @@
 
     <section id="work" class="work">
         <div class="container">
-            <p class="section-label" data-translate="work.label">Razvoj</p>
+            <p class="section-label"><span class="section-index">04</span><span data-translate="work.label">Razvoj</span></p>
             <h2 class="section-title section-title--left" data-translate="work.title">Projekti</h2>
             <p class="section-subtitle section-subtitle--left" data-translate="work.subtitle">Uz fleet i customer service, ovde i dalje gradim softver — dva primera.</p>
             <div class="portfolio-grid">
-                <article class="portfolio-item">
+                <article class="portfolio-item blueprint-corners">
                     <div class="portfolio-icon"><i class="fas fa-house-chimney-user"></i></div>
                     <div class="portfolio-body">
                         <p class="portfolio-meta" data-translate="portfolio.teambuildstay.role">Diplomski rad · Rezervacije</p>
@@ -249,7 +249,7 @@
                         <a href="https://github.com/cikirose/teambuildstay" class="text-link" target="_blank" rel="noopener noreferrer" data-translate="portfolio.viewGithub">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </article>
-                <article class="portfolio-item">
+                <article class="portfolio-item blueprint-corners">
                     <div class="portfolio-icon"><i class="fas fa-mobile-screen-button"></i></div>
                     <div class="portfolio-body">
                         <p class="portfolio-meta" data-translate="portfolio.thissite.role">Lični projekat</p>
@@ -259,13 +259,23 @@
                         <a href="https://github.com/cikirose/portfolio" class="text-link" target="_blank" rel="noopener noreferrer" data-translate="portfolio.viewGithub">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </article>
+                <article class="portfolio-item blueprint-corners">
+                    <div class="portfolio-icon"><i class="fas fa-robot"></i></div>
+                    <div class="portfolio-body">
+                        <p class="portfolio-meta" data-translate="portfolio.pyscripts.role">Lični alati · Privatno</p>
+                        <h3 data-translate="portfolio.pyscripts.title">Python skripte za svakodnevnicu</h3>
+                        <p data-translate="portfolio.pyscripts.description">Gomila manjih Python programa koje sam pravio da olakšam sebi svakodnevne stvari — podsetnici, automatizacija, mali alati po potrebi.</p>
+                        <div class="portfolio-tags"><span>Python</span><span>Automatizacija</span><span>Skripte</span></div>
+                        <span class="portfolio-meta-note" data-translate="portfolio.pyscripts.note">Privatni repo-i</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <section id="skills" class="skills">
         <div class="container">
-            <p class="section-label" data-translate="skills.label">Kompetencije</p>
+            <p class="section-label"><span class="section-index">05</span><span data-translate="skills.label">Kompetencije</span></p>
             <h2 class="section-title section-title--left" data-translate="skills.title">Veštine</h2>
             <div class="skills-grid">
                 <div class="skill-group">
@@ -310,7 +320,7 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <p class="section-label" data-translate="contact.label">Kontakt</p>
+            <p class="section-label"><span class="section-index">06</span><span data-translate="contact.label">Kontakt</span></p>
             <p class="section-subtitle section-subtitle--left contact-intro" data-translate="contact.subtitle">Za fleet, trucking, customer service ili remote saradnju.</p>
             <div class="contact-layout">
                 <div class="contact-details">
@@ -361,6 +371,7 @@
     <footer class="footer">
         <div class="container footer-inner">
             <p data-translate="footer.copyright">&copy; 2026 Aleksandar Janković</p>
+            <span class="footer-build">// build 2026.09</span>
             <a href="#home" class="footer-top" data-translate="footer.top">Na vrh</a>
         </div>
     </footer>

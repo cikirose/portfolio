@@ -51,6 +51,10 @@ const translations = {
         'portfolio.thissite.title': 'Portfolio koji upravo gledaš',
         'portfolio.thissite.description': 'Vanilla HTML, CSS i JavaScript, bez frameworka — dark/light tema, dvojezični sadržaj i intro ekran koji si upravo prošao/la.',
         'portfolio.viewGithub': 'GitHub',
+        'portfolio.pyscripts.role': 'Lični alati · Privatno',
+        'portfolio.pyscripts.title': 'Python skripte za svakodnevnicu',
+        'portfolio.pyscripts.description': 'Gomila manjih Python programa koje sam pravio da olakšam sebi svakodnevne stvari — podsetnici, automatizacija, mali alati po potrebi.',
+        'portfolio.pyscripts.note': 'Privatni repo-i',
 
         'services.label': 'Usluge',
         'services.title': 'Šta nudim',
@@ -175,6 +179,10 @@ const translations = {
         'portfolio.thissite.title': 'The portfolio you\'re looking at',
         'portfolio.thissite.description': 'Vanilla HTML, CSS, and JavaScript, no framework — dark/light theme, bilingual content, and the intro screen you just came through.',
         'portfolio.viewGithub': 'GitHub',
+        'portfolio.pyscripts.role': 'Personal tools · Private',
+        'portfolio.pyscripts.title': 'Python scripts for everyday life',
+        'portfolio.pyscripts.description': 'A bunch of small Python programs I\'ve built to make everyday things easier — reminders, automation, little tools whenever I need one.',
+        'portfolio.pyscripts.note': 'Private repos',
 
         'services.label': 'Services',
         'services.title': 'What I offer',
